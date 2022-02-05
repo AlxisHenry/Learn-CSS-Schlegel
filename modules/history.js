@@ -1,4 +1,4 @@
-import { this_find_sport, Research_History } from "./data.js";
+import { this_find_sport, Research_History, Span_History } from "./data.js";
 
 export function Adding_to_Research_History() {
   if (Research_History.includes(this_find_sport.value)) {
@@ -15,7 +15,6 @@ export function Resize_Research_History() {
 }
 
 export function Show_Research_History() {
-  const Span_History = document.querySelectorAll(".show-research-history");
 
   if ((Span_History[0].innerHTML = `${Research_History[0]}` === "undefined")) {
     Span_History[0].innerHTML = "Last Research";
