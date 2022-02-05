@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style/style.css">
-        <title>Sport Addict  - Le sport à tous les niveaux</title>
-    </head>
-    <body>
-        <header>
-            <img src="images/logo/SportAddict.png" alt="Logo de Sport Addict">
-            <nav>
-                <ul>
-                    <li>Idée d'activité</li>
-                    <li>Les événements à venir</li>
-                    <li>S'inscrire</li>
-                </ul>
-            </nav>
-        </header> 
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="icon" href="./images/logo/sport-addict.png" />
+    <script src="https://kit.fontawesome.com/ac4dc0897b.js" crossorigin="anonymous"></script>
+    <title>Sport Addict</title>
+  </head>
+  <body>
+
     
-        <div>
-            Trouvez le sport qui vous correspond
-            En plein centre ville ou en pleine nature
-            <br>
-            <input type="text" size="20">
-            <a href="#">Rechercher</a>
-            <BR>
-            Plus de 3500 sportifs nous ont déjà rejoints
-        </div>
+    <span class="show-research-history"></span><br>
+    <span class="show-research-history"></span><br>
+    <span class="show-research-history"></span><br>
+
+    <header class="this_take-all-page-view">
+      <!-- HEADER 100 VH -->
 
 
+      <div class="this_contain-logo">
+        <img src="images/logo/sport-addict.png" alt="Logo de Sport Addict" />
+      </div>
+
+      <nav class="this_contain-searchbar this_contain_menu">
+        <ul>
+          <li>Idée d'activité</li>
+          <li>Les événements à venir</li>
+          <li>S'inscrire</li>
+        </ul>
+        <a class="this_contain-href-to-sport" href="#"><i class="fas fa-search"></i></a>
+        <input class="research-sport this_find-sport" type="text" size="20" />
+    </nav>
+
+      <div class="this_contain-description">
+        Trouvez le sport qui vous correspond En plein centre ville ou en pleine
+        nature
+        <br/>
+        <br/>
+        Plus de 3500 sportifs nous ont déjà rejoints
+      </div>
+    
+    </header>
+
+    <img src="./images/activites/basketball.jpg"  id="basketball" alt="Basketball">
+
+    <!--  
         <div>
             Idée d'activité
             <BR>
@@ -119,8 +136,9 @@
             Ironman de Noël
             <BR>
         </div>
+    -->
 
-        <footer>
+    <!-- <footer>
             A propos
             <ul>
                 <li><a href="#">Fonctionnement du site</a></li>
@@ -137,6 +155,9 @@
                 <li><a href="#">Centre d'aide</a></li>
                 <li><a href="#">Nous contacter</a></li>
             </ul>
-        </footer>
-    </body>
+        </footer>    -->
+
+    <script src="javascript/data.js"></script>
+    <script src="javascript/app.js"></script>
+  </body>
 </html>

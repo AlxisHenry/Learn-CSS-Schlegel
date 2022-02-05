@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    background-image: 
+    linear-gradient(transparent 23px,
+      rgba(220,220,200,.8) 24px,
+      transparent 24px),
+    linear-gradient(90deg,
+      transparent 23px,
+      rgba(220,220,200,.8) 24px,
+      transparent 24px);
+    background-size: 100% 24px, 24px 100%;
+} */
+
+header {
+  display: flex;
+  justify-content: left;
+  flex-direction:row;
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+
+
+/* 
+container {
+  width: 100vw;
+  height: 100vh;
+  background-color: blue;
+} */
