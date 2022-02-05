@@ -7,10 +7,10 @@ this_contain_href.addEventListener("click", () => {
   Adding_to_Research_History();
   Resize_Research_History();
   Show_Research_History();
-  Verification_Research_Exist();
+  Verification_Research_Validity();
 });
 
-function Verification_Research_Exist() {
+function Verification_Research_Validity() {
   if (this_find_sport.value === "") {
     console.log("null");
     // Ajout d'une animation si la case est vide. {error anim}

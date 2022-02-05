@@ -15,22 +15,30 @@
     background-size: 100% 24px, 24px 100%;
 } */
 
-header {
-  display: flex;
-  justify-content: left;
-  flex-direction:row;
-  background-color: red;
-  width: 100vw;
+#this_contain_all_first_page {
+  display: grid;
+  width: 100%;
   height: 100vh;
+  grid-template-areas: "head nav"
+                       "head nav"
+                       "main  nav";
+  grid-template-rows: 3.5fr 2fr 4fr;
+  grid-template-columns: 4.5fr 5fr;
 }
 
+#this_contain_all_first_page > header {
+  grid-area: head;
+  background-color: #8ca0ff;
+  display: flex;
+  justify-content: center;
+}
 
+#this_contain_all_first_page > nav {
+  grid-area: nav;
+  background-color: #ffa08c;
+}
 
-
-
-/* 
-container {
-  width: 100vw;
-  height: 100vh;
-  background-color: blue;
-} */
+#this_contain_all_first_page > main {
+  grid-area: main;
+  background-color: #ffff64;
+}
