@@ -42,3 +42,7 @@
   grid-area: main;
   background-color: #ffff64;
 }
+
+.this_contain_history {
+  background-color: red;
+}
