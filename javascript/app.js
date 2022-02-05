@@ -49,17 +49,17 @@ function Show_Research_History() {
   const Span_History = document.querySelectorAll(".show-research-history");
 
   if (Span_History[0].innerHTML = `${Research_History[0]}` === "undefined") {
-    Span_History[0].innerHTML = "";
+    Span_History[0].innerHTML = "Last Research";
   } else {
     Span_History[0].innerHTML = `${Research_History[0]}`;
   }
   if (Span_History[1].innerHTML = `${Research_History[1]}` === "undefined") {
-    Span_History[1].innerHTML = "";
+    Span_History[1].innerHTML = "Last Research";
   } else {
     Span_History[1].innerHTML = `${Research_History[1]}`;
   }
   if (Span_History[2].innerHTML = `${Research_History[2]}` === "undefined") {
-    Span_History[2].innerHTML = ""; 
+    Span_History[2].innerHTML = "Last Research"; 
   } else {
     Span_History[2].innerHTML = `${Research_History[2]}`;
   }

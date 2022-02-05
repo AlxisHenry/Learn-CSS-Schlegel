@@ -4,6 +4,7 @@ const path_to_images = {
   evenement: "./images/evenement/",
 };
 
+
 const images = {
   activites: {
     basket: {
