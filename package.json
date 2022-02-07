@@ -1,0 +1,18 @@
+{
+  "name": "learn-css",
+  "version": "1.0.0",
+  "description": "Learn CSS > CCI Campus",
+  "main": "main.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlxisHenry/Learn-CSS-Schlegel.git"
+  },
+  "author": "Alexis Henry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlxisHenry/Learn-CSS-Schlegel/issues"
+  },
+  "homepage": "https://github.com/AlxisHenry/Learn-CSS-Schlegel#readme"
+}
