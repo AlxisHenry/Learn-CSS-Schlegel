@@ -1,6 +1,4 @@
-import { this_find_sport } from "./data.js";
-import { this_contain_value as GET_ID } from "./data.js";
-import { INPUT_RESEARCH } from "./data.js";
+import { this_find_sport, this_contain_value as GET_ID, INPUT_RESEARCH, find} from "./data.js";
 
 export function Verification_Research_Content() {
   if (this_find_sport.value === "") {
@@ -14,7 +12,7 @@ export function Verification_Research_Content() {
 }
 
 export function Verification_Research_Validity() {
-  if (document.getElementById(`${GET_ID}`)) {
+  if (find(GET_ID)) {
     INPUT_RESEARCH.classList.remove('border-error-animation');
     this_find_sport.href = `#${GET_ID}`;
     // Ajout d'une animation d'envoi vers l'image.
