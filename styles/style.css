@@ -29,12 +29,17 @@ body {
 .this_contain_notnav {
  width: 100%;
  display: flex;
- height: 50%;
+ height: 20%;
 }
 
 .this_contain-logo {
-  background-color: green;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 80%;
+}
+
+.logo {
+ width: 80%;
 }
 
 .this_contain-description {
@@ -52,7 +57,6 @@ body {
   font-size: 22px;
   color: white;
   font-weight: 500;
-  font-stretch: 
 }
 
 .this_contain-searchbar {
@@ -61,4 +65,8 @@ body {
   width: 50%;
   height: auto;
   background-color: gray;
+}
+
+.border-error-animation {
+  border-color: red;
 }
