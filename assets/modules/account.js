@@ -8,8 +8,12 @@ import { TOGGLE_CRYPTED_PASS } from "./data.js";
 // Affichage des informations du profiles
 // Affichage du mots de passe avec possibilité de le cacher ou de l'afficher en clair
 
-if (CRYPTED_PASS.innerHTML = "") {
+console.log(CRYPTED_PASS.innerHTML);
+
+if (CRYPTED_PASS.innerHTML === "") {
     CRYPTED_PASS.innerHTML = 'No Password Set';
+    TOGGLE_CRYPTED_PASS[0].style.display = "none";
+    TOGGLE_CRYPTED_PASS[1].style.display = "none";
 } else {
     for (var hide=0; hide < LOCAL_GET_PW.length; hide++) {
         CRYPTED_PASS.insertAdjacentHTML('beforeend', '*');

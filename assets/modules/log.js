@@ -28,25 +28,25 @@ export function TOGGLE_REGISTER() {
 }
 
 export function VERIFIY_REGISTER_VALUES() {
-  if (GET_NAME.value.length < 1) {
+  if (GET_NAME.value.length < 5) {
     alert("wrong name");
+    CANCEL_RETURN_INDEX.setAttribute("href", "#");
+    return false;
+  } else if (GET_PSWD.value.length < 5) {
+    alert("wrong password");
     CANCEL_RETURN_INDEX.setAttribute("href", "#");
     return false;
   } else {
     CANCEL_RETURN_INDEX.setAttribute("href", "../index.html");
     return true;
   }
-  if (GET_PSWD.value.length < 1) {
-  } else {
-    return true;
-  }
+
 }
 
 export function ADD_TO_LOCALSTORAGE() {
-  if (ADD_TO_LOCALSTORAGE) {
+  if (VERIFIY_REGISTER_VALUES) {
     localStorage.setItem("name", GET_NAME.value);
     localStorage.setItem("pass", GET_PSWD.value);
-    window.location.reload();
     // Login
     // Animation login réussi > redirection vers index
   } else {
