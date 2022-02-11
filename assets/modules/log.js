@@ -101,3 +101,11 @@ export function TOGGLE_PW_HIDDEN() {
     CRYPTED_PASS.insertAdjacentHTML("beforeend", "*");
   }
 }
+
+export function VERIFY_CONNECT_FOR_AUTHORIZE() {
+  if (!LOCAL_GET_ID) {
+      return false;
+  } else {  
+      return true;
+  }
+}
