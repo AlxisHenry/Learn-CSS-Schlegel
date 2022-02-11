@@ -3,10 +3,10 @@ export const this_contain_href = document.querySelector(".this_contain-href-to-s
 export const Span_History = document.querySelectorAll(".show-research-history");
 export let Research_History = [];
 export function Adapt_Value(value) {
-    return value.innerHTML.toLowerCase().replace(new RegExp("[^(a-zA-Z)]", "g"), "");
+    return value.innerHTML.toLowerCase();
 }
 export function LowerValue_ID(value) {
-    return value.toLowerCase().replace(new RegExp("[^(a-zA-Z)]", "g"), "");
+    return value.toLowerCase();
 }
 export const INPUT_RESEARCH = document.querySelector('.research-sport');
 export const SHOW_USER_NAME = document.querySelector('.user-id');
@@ -22,3 +22,4 @@ export const CRYPTED_PASS = document.querySelector('.show-crypt-pass');
 export const TOGGLE_CRYPTED_PASS = document.querySelectorAll('.toggle-uncrypt-pass');
 export const SHOW_USER_ID = document.querySelector('.show-account-user-id');
 export const THIS_CONTAIN_IMG = document.querySelector('.show-search-img');
+export const TOGGLE_FAV_IMG = document.querySelectorAll('.toggle-fav-img');

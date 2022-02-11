@@ -29,3 +29,7 @@ TOGGLE_CRYPTED_PASS[0].addEventListener("click", () => {
 CANCEL_USER_CONNECTION.addEventListener("click", () => {
   LOGOUT_USER();
 });
+
+// View Fav
+
+console.log(TOGGLE_FAV_IMG);

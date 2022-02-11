@@ -28,10 +28,10 @@ export const IMAGES_DATA = [
     "alt": "Fitness Image"
   },
   {
-    "_id": "karate",
+    "_id": "karaté",
     "class": "Activité",
     "title": "Crossfit",
-    "link": "./assets/images/activites/crossfit.jpg",
+    "link": "./assets/images/activites/karaté.jpg",
     "alt": "Crossfit Image"
   },
   {

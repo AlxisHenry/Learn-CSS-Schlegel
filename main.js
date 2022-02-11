@@ -4,17 +4,33 @@ import { Show_Research_History as HISTORY_SHOW } from "./assets/modules/history.
 import { Verification_Research_Content as RESEARCH_CONTENT } from "./assets/modules/routes.js";
 import { this_contain_href as SEARCH_ICON } from "./assets/modules/global.js";
 import { SHOW_ID } from "./assets/modules/log.js";
-import { LOCAL_GET_ID } from "./assets/modules/global.js";
+import { LOCAL_GET_ID, TOGGLE_FAV_IMG } from "./assets/modules/global.js";
 import { TOGGLE_REGISTER } from "./assets/modules/log.js";
+import { LOCAL_STORAGE_FAV, REMOVE_LOCAL_STORAGE_FAV, VERIFY_FAV_STATUS } from "./assets/modules/favoris.js";
+
 
 SEARCH_ICON.addEventListener("click", () => {
   HISTORY_ADD();
   HISTORY_RESIZE();
   HISTORY_SHOW();
   RESEARCH_CONTENT();
+  VERIFY_FAV_STATUS();
 });
+
+
+TOGGLE_FAV_IMG[0].addEventListener('click', () => {
+  LOCAL_STORAGE_FAV();
+})
+
+TOGGLE_FAV_IMG[1].addEventListener('click', () => {
+  REMOVE_LOCAL_STORAGE_FAV();
+})
 
 window.addEventListener("load", () => {
   SHOW_ID(LOCAL_GET_ID);
   TOGGLE_REGISTER();
+  VERIFY_FAV_STATUS();
 });
+
+
+
