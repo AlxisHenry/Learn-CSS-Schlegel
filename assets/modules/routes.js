@@ -1,25 +1,36 @@
-import { this_find_sport } from "./data.js";
-import { INPUT_RESEARCH } from "./data.js";
+import {
+  this_find_sport,
+  INPUT_RESEARCH,
+  THIS_CONTAIN_IMG,
+  LowerValue_ID,
+} from "./global.js";
+
+import { IMAGES_DATA } from "./data.js";
 
 export function Verification_Research_Content() {
   if (this_find_sport.value === "") {
     console.log("null");
-    INPUT_RESEARCH.classList.add('border-error-animation')
+    INPUT_RESEARCH.classList.add("border-error-animation");
     // Ajout d'une animation si la case est vide. {error anim}
   } else {
-    INPUT_RESEARCH.classList.remove('border-error-animation');
+    INPUT_RESEARCH.classList.remove("border-error-animation");
     Verification_Research_Validity();
   }
 }
 
 export function Verification_Research_Validity() {
-  if (document.getElementById(`${this_find_sport.value}`)) {
-    INPUT_RESEARCH.classList.remove('border-error-animation');
-    // Ajout d'une animation d'envoi vers l'image.
-    // Ajout d'une classe à celle-ci.
+  var DATA_CONTAIN = IMAGES_DATA.find(
+    (x) => x._id === LowerValue_ID(this_find_sport.value)
+  );
+  if (DATA_CONTAIN) {
+    INPUT_RESEARCH.classList.remove("border-error-animation");
+    THIS_CONTAIN_IMG.setAttribute("src", DATA_CONTAIN.link);
+    THIS_CONTAIN_IMG.setAttribute("class", DATA_CONTAIN.class);
+    THIS_CONTAIN_IMG.setAttribute("alt", DATA_CONTAIN.alt);
+    THIS_CONTAIN_IMG.setAttribute("title", DATA_CONTAIN.title);
+    THIS_CONTAIN_IMG.setAttribute("id", DATA_CONTAIN._id);
   } else {
-    INPUT_RESEARCH.classList.add('border-error-animation')
+    INPUT_RESEARCH.classList.add("border-error-animation");
     alert("Nous n'avons pas ce sport, désolé !");
-    // Ajout d'une animation si le sport n'existe pas. {error anim}
   }
 }

@@ -1,5 +1,5 @@
-import { this_find_sport, Research_History, Span_History } from "./data.js";
-import { Adapt_Value } from "./data.js";
+import { this_find_sport, Research_History, Span_History, Adapt_Value } from "./global.js";
+import { IMAGES_DATA } from "./data.js"
 
 export function Adding_to_Research_History() {
   if (Research_History.includes(this_find_sport.value)) {
@@ -37,7 +37,7 @@ export function Show_Research_History() {
 }
 
 export function Checking_History_Value(id) {
-  if (document.querySelector(`#${Adapt_Value(id)}`)) {
+  if (IMAGES_DATA.find((x) => x._id === Adapt_Value(id))) {
     id.style.color = "green";
   } else {
     id.style.color = "red";

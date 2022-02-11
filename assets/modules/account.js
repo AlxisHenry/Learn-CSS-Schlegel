@@ -5,11 +5,8 @@ import {
   TOGGLE_PW_HIDDEN,
   TOGGLE_PW_VISIBLE,
 } from "./log.js";
-import { CANCEL_USER_CONNECTION } from "./data.js";
-import { TOGGLE_CRYPTED_PASS } from "./data.js";
 
-// Affichage des informations du profiles
-// Affichage du mots de passe avec possibilité de le cacher ou de l'afficher en clair
+import { CANCEL_USER_CONNECTION, TOGGLE_CRYPTED_PASS } from "./global.js";
 
 window.addEventListener("load", () => {
   TOGGLE_VIEW_PW();

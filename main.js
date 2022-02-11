@@ -2,9 +2,9 @@ import { Adding_to_Research_History as HISTORY_ADD } from "./assets/modules/hist
 import { Resize_Research_History as HISTORY_RESIZE } from "./assets/modules/history.js";
 import { Show_Research_History as HISTORY_SHOW } from "./assets/modules/history.js";
 import { Verification_Research_Content as RESEARCH_CONTENT } from "./assets/modules/routes.js";
-import { this_contain_href as SEARCH_ICON } from "./assets/modules/data.js";
+import { this_contain_href as SEARCH_ICON } from "./assets/modules/global.js";
 import { SHOW_ID } from "./assets/modules/log.js";
-import { LOCAL_GET_ID } from "./assets/modules/data.js";
+import { LOCAL_GET_ID } from "./assets/modules/global.js";
 import { TOGGLE_REGISTER } from "./assets/modules/log.js";
 
 SEARCH_ICON.addEventListener("click", () => {

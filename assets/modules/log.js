@@ -9,7 +9,7 @@ import {
   TOGGLE_CRYPTED_PASS,
   CRYPTED_PASS,
   SHOW_USER_ID,
-} from "./data.js";
+} from "./global.js";
 
 export function SHOW_ID(param) {
   SHOW_USER_NAME.innerHTML = param;

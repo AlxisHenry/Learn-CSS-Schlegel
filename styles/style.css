@@ -1,6 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
 }
 
 ::-webkit-scrollbar {
@@ -8,22 +9,24 @@
 }
 
 body {
-    background-image: 
-    linear-gradient(transparent 23px,
-      rgba(220,220,200,.8) 24px,
-      transparent 24px),
-    linear-gradient(90deg,
+  background-image: linear-gradient(
       transparent 23px,
-      rgba(220,220,200,.8) 24px,
-      transparent 24px);
-    background-size: 100% 24px, 24px 100%;
+      rgba(220, 220, 200, 0.8) 24px,
+      transparent 24px
+    ),
+    linear-gradient(
+      90deg,
+      transparent 23px,
+      rgba(220, 220, 200, 0.8) 24px,
+      transparent 24px
+    );
+  background-size: 100% 24px, 24px 100%;
 }
 
 #this_contain_header {
+  width: 100%;
   display: flex;
-  /* background-color: red; */
-  flex-direction: row;
-
+  justify-content: center;
 }
 
 .navbar {
@@ -31,7 +34,7 @@ body {
   width: 100%;
   height: 80px;
   justify-content: center;
-  
+
   position: absolute;
   top: 0;
   z-index: 1;
@@ -40,13 +43,13 @@ body {
 }
 
 .navbar ul {
-    display: flex;
-    position: relative;
-    list-style-type: none;
-    margin: 25px;
-    /* background-color: red; */
-    justify-content: space-between;
-    width: 100%
+  display: flex;
+  position: relative;
+  list-style-type: none;
+  margin: 25px;
+  /* background-color: red; */
+  justify-content: space-between;
+  width: 100%;
 }
 
 .navbar ul li:first-child {
@@ -54,9 +57,9 @@ body {
 }
 
 .navbar ul li:last-child {
-display: flex;
-flex-direction: column;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .navbar ul li:last-child img {
@@ -82,4 +85,44 @@ justify-content: center;
   /* position: absolute; */
   /* top:25px; */
   /* right: 60px;  */
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+    "main image"
+    "main image";
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 50% 1fr; */
+  /* grid-template-rows: 20px; */
+}
+
+.this_contain_logo,
+.this_contain_notnav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  grid-area: main;
+}
+
+.this_contain_logo {
+  grid-row: 1/2;
+}
+
+
+.this_contain_notnav {
+  grid-row: 2/2;
+}
+
+
+
+.this_section_contain_image-grid {
+  grid-area: image;
+}
+
+.this_section_contain_image-grid > img {
+  width: 300px;
+  height: 300px;
 }
