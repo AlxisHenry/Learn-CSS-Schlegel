@@ -1,10 +1,11 @@
 // Ajout d'une image aux favoris
 
-import { THIS_CONTAIN_IMG, TOGGLE_FAV_IMG } from "./global.js";
+import { THIS_CONTAIN_IMG, TOGGLE_FAV_IMG, SHOW_USERS_FAVS } from "./global.js";
 import { IMAGES_DATA } from "./data.js";
 
 export function VERIFY_FAV_STATUS() {
   var DATA_CONTAIN = IMAGES_DATA.find((x) => x._id === THIS_CONTAIN_IMG.id);
+
   if (localStorage.getItem(`${DATA_CONTAIN._id}`)) {
     TOGGLE_FAV_IMG[0].style.display = "none";
     TOGGLE_FAV_IMG[1].style.display = "block";
@@ -12,12 +13,11 @@ export function VERIFY_FAV_STATUS() {
     TOGGLE_FAV_IMG[1].style.display = "none";
     TOGGLE_FAV_IMG[0].style.display = "block";
   }
-  console.log('ok');    
 }
 
 export function LOCAL_STORAGE_FAV() {
-  var DATA_CONTAIN = IMAGES_DATA.find((x) => x._id === THIS_CONTAIN_IMG.id);
   var FAV_STORAGE;
+  var DATA_CONTAIN = IMAGES_DATA.find((x) => x._id === THIS_CONTAIN_IMG.id);
 
   if (!localStorage.getItem(`${DATA_CONTAIN._id}`)) {
     FAV_STORAGE = new Array();
@@ -39,12 +39,25 @@ export function LOCAL_STORAGE_FAV() {
 }
 
 export function REMOVE_LOCAL_STORAGE_FAV() {
-
   var DATA_CONTAIN = IMAGES_DATA.find((x) => x._id === THIS_CONTAIN_IMG.id);
 
   if (localStorage.getItem(`${DATA_CONTAIN._id}`)) {
     localStorage.removeItem(`${DATA_CONTAIN._id}`);
     TOGGLE_FAV_IMG[1].style.display = "none";
     TOGGLE_FAV_IMG[0].style.display = "block";
+  }
+}
+
+export function GET_ALL_FAV() {
+  // var GET = localStorage.getItem(`${DATA_CONTAIN._id}`);
+  var items = { ...localStorage };
+
+  for (let dif in items) {
+    if (IMAGES_DATA.find((x) => x._id === dif)) {
+      var DATA = IMAGES_DATA.find((x) => x._id === dif); 
+      var FAV = `<img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p>`
+      SHOW_USERS_FAVS.insertAdjacentHTML('afterbegin', FAV);
+    } else {
+    }
   }
 }

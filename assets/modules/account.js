@@ -6,6 +6,8 @@ import {
   TOGGLE_PW_VISIBLE,
 } from "./log.js";
 
+import { GET_ALL_FAV } from "./favoris.js";
+
 import { CANCEL_USER_CONNECTION, TOGGLE_CRYPTED_PASS } from "./global.js";
 
 window.addEventListener("load", () => {
@@ -30,6 +32,6 @@ CANCEL_USER_CONNECTION.addEventListener("click", () => {
   LOGOUT_USER();
 });
 
-// View Fav
+// View Fav^
 
-console.log(TOGGLE_FAV_IMG);
+GET_ALL_FAV();
