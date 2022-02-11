@@ -52,12 +52,19 @@ export function GET_ALL_FAV() {
   // var GET = localStorage.getItem(`${DATA_CONTAIN._id}`);
   var items = { ...localStorage };
 
+  delete items.name;
+  delete items.pass;
+
+  if (Object.keys(items).length === 0 && items.constructor === Object) {
+    SHOW_USERS_FAVS.innerHTML = "No Favoris Found";
+  }
+
   for (let dif in items) {
     if (IMAGES_DATA.find((x) => x._id === dif)) {
-      var DATA = IMAGES_DATA.find((x) => x._id === dif); 
-      var FAV = `<img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p>`
-      SHOW_USERS_FAVS.insertAdjacentHTML('afterbegin', FAV);
-    } else {
+      var DATA = IMAGES_DATA.find((x) => x._id === dif);
+      var FAV = `<img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p>
+      <button onclick="" style="width:10%;" class="remove-item-to-fav">Remove</button>`;
+      SHOW_USERS_FAVS.insertAdjacentHTML("afterbegin", FAV);
     }
   }
 }
