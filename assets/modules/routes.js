@@ -1,5 +1,4 @@
 import { this_find_sport } from "./data.js";
-import { this_contain_value as GET_ID } from "./data.js";
 import { INPUT_RESEARCH } from "./data.js";
 
 export function Verification_Research_Content() {
@@ -14,9 +13,9 @@ export function Verification_Research_Content() {
 }
 
 export function Verification_Research_Validity() {
-  if (document.getElementById(`${GET_ID}`)) {
+  if (document.getElementById(`${this_find_sport.value}`)) {
     INPUT_RESEARCH.classList.remove('border-error-animation');
-    this_find_sport.href = `#${GET_ID}`;
+    this_find_sport.href = `#${this_find_sport.value}`;
     // Ajout d'une animation d'envoi vers l'image.
     // Ajout d'une classe à celle-ci.
   } else {

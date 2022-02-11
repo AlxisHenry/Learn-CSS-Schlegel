@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/responsive/index.css" />
-    <link rel="icon" href="./images/logo/sport-addict.png" />
+    <link rel="icon" href="./assets/images/logo/sport-addict.png" />
     <script
       src="https://kit.fontawesome.com/ac4dc0897b.js"
       crossorigin="anonymous"
@@ -13,44 +13,43 @@
   </head>
   <body>
     <header id="this_contain_header">
-      <div class="this_contain-logo">
-        <img class="logo" src="./images/logo/sport-addict.png" alt="Logo de Sport Addict" />
-      </div>
-      <div class="this_contain_notnav">
-        <div class="this_contain-description">
-          Trouvez le sport qui vous correspond En plein centre ville ou en pleine
-          nature
-          <br />
-          <br />
-          Plus de 3500 sportifs nous ont déjà rejoints
-        </div>
-        <div class="this_contain_history">
-          <h1>Last researchs:</h1>
-          <span class="show-research-history"> 1</span><br />
-          <span class="show-research-history"> 2</span><br />
-          <span class="show-research-history"> 3</span>
-        </div>
-      </div>
+        <img class="logo" src="./assets/images/logo/sport-addict.png" alt="Logo de Sport Addict" />
+         <nav class="navbar">
+          <ul>
+            <li><a href="" class="active">Idée d'activité</a>
+            <a href="" id="rightNav">Les événements à venir</a></li>
+            <li>         
+               <a class="this_contain-href-to-sport" href="#"><i class="fas fa-search"></i></a>
+               <input  class="research-sport this_find-sport" type="text" size="20" />
+            </li>
+            <li>        
+               <span class="user-login"><a class="toggle-account-register" href=""></a></span>
+            </li>
+            <li>
+              <img class="user-img" src="./assets/svg/user-solid.svg" alt="">
+              <span class="user-id"></span>
+            </li>
+          </ul>
+        </nav>
     </header>
-    <nav class="this_contain-searchbar this_contain_menu">
-      
-        Idée d'activité
-        Les événements à venir
-        S'inscrire
-      
-        <a class="this_contain-href-to-sport" href="#"
-        ><i class="fas fa-search"></i
-      ></a>
-      <input class="research-sport this_find-sport" type="text" size="20" />
-    </nav>
 
+    <div class="this_contain_notnav">
+      <div class="this_contain-description">
+        Trouvez le sport qui vous correspond En plein centre ville ou en pleine
+        nature
+        <br/>
+        <br/>
+        Plus de 3500 sportifs nous ont déjà rejoints
+      </div>
+      <div class="this_contain_history">
+        <h1>Last researchs:</h1>
+        <span class="show-research-history"> 1</span><br />
+        <span class="show-research-history"> 2</span><br />
+        <span class="show-research-history"> 3</span>
+      </div>
+    </div>
 
-    <!-- <img
-      src="./images/activites/basketball.jpg"
-      id="basketball"
-      alt="Basketball"
-    /> -->
-
+    
     <!--  
           <div>
               Idée d'activité
