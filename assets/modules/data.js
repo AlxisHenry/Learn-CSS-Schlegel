@@ -17,3 +17,4 @@ export const CANCEL_RETURN_INDEX = document.querySelector('.href-return-index')
 export const CANCEL_USER_CONNECTION = document.querySelector('.cancel-user-connection');
 export const CRYPTED_PASS = document.querySelector('.show-crypt-pass');
 export const TOGGLE_CRYPTED_PASS = document.querySelectorAll('.toggle-uncrypt-pass');
+export const SHOW_USER_ID = document.querySelector('.show-account-user-id');

@@ -6,15 +6,13 @@ import {
   LOCAL_GET_ID,
   LOCAL_GET_PW,
   CANCEL_RETURN_INDEX,
+  TOGGLE_CRYPTED_PASS,
+  CRYPTED_PASS,
+  SHOW_USER_ID,
 } from "./data.js";
-// import { SHOW_USER_PASS } from "./data.js";
 
 export function SHOW_ID(param) {
   SHOW_USER_NAME.innerHTML = param;
-}
-
-export function SHOW_PW(param) {
-  // Permet de voir son mot de passe dans l'onglet 'Mon compte'.
 }
 
 export function TOGGLE_REGISTER() {
@@ -40,7 +38,6 @@ export function VERIFIY_REGISTER_VALUES() {
     CANCEL_RETURN_INDEX.setAttribute("href", "../index.html");
     return true;
   }
-
 }
 
 export function ADD_TO_LOCALSTORAGE() {
@@ -56,4 +53,51 @@ export function ADD_TO_LOCALSTORAGE() {
 
 export function LOGOUT_USER() {
   localStorage.clear();
+  // window.location.reload();
+  CRYPTED_PASS.innerHTML = "Vous avez été déconnecté !";
+  SHOW_USER_ID.innerHTML = "";
+  TOGGLE_CRYPTED_PASS[0].style.visibility = "hidden";
+  TOGGLE_CRYPTED_PASS[1].style.visibility = "hidden";
+}
+
+export function TOGGLE_VIEW_PW() {
+  CRYPTED_PASS.innerHTML = "No Password Set";
+  TOGGLE_CRYPTED_PASS[0].style.display = "none";
+  TOGGLE_CRYPTED_PASS[1].style.display = "none";
+
+  if (!LOCAL_GET_PW) {
+    CRYPTED_PASS.innerHTML = "No Password Set<br>";
+    TOGGLE_CRYPTED_PASS[0].style.display = "none";
+    TOGGLE_CRYPTED_PASS[1].style.display = "none";
+  } else {
+    CRYPTED_PASS.innerHTML = "";
+    for (var hide = 0; hide < LOCAL_GET_PW.length; hide++) {
+      CRYPTED_PASS.insertAdjacentHTML("beforeend", "*");
+    }
+    TOGGLE_CRYPTED_PASS[0].style.display = "none";
+    TOGGLE_CRYPTED_PASS[1].style.display = "flex";
+  }
+}
+
+export function TOGGLE_VIEW_ID() {
+  if (!LOCAL_GET_ID) {
+    SHOW_USER_ID.innerHTML = "Une erreur est survenue";
+  } else {
+    SHOW_USER_ID.innerHTML = LOCAL_GET_ID;
+  }
+}
+
+export function TOGGLE_PW_VISIBLE() {
+  TOGGLE_CRYPTED_PASS[0].style.display = "flex";
+  TOGGLE_CRYPTED_PASS[1].style.display = "none";
+  CRYPTED_PASS.innerHTML = LOCAL_GET_PW;
+}
+
+export function TOGGLE_PW_HIDDEN() {
+  TOGGLE_CRYPTED_PASS[1].style.display = "flex";
+  TOGGLE_CRYPTED_PASS[0].style.display = "none";
+  CRYPTED_PASS.innerHTML = "";
+  for (var hide = 0; hide < LOCAL_GET_PW.length; hide++) {
+    CRYPTED_PASS.insertAdjacentHTML("beforeend", "*");
+  }
 }
