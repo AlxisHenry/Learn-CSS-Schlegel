@@ -45,11 +45,12 @@ export function VERIFIY_REGISTER_VALUES() {
 export function ADD_TO_LOCALSTORAGE() {
   if (ADD_TO_LOCALSTORAGE) {
     localStorage.setItem("name", GET_NAME.value);
+    localStorage.setItem("pass", GET_PSWD.value);
     window.location.reload();
     // Login
     // Animation login réussi > redirection vers index
   } else {
-    localStorage.setItem("pass", GET_PSWD.value);
+    // Animation login failed
   }
 }
 
