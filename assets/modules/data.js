@@ -5,7 +5,9 @@ export const IMAGES_DATA = [
     "title": "Basketball",
     "link": "./assets/images/activites/basketball.jpg",
     "favlink": "../assets/images/activites/basketball.jpg",
-    "alt": "Basketball Image"
+    "alt": "Basketball Image",
+    "comment": "Gérer le ballon",
+    "h1": "Le Basketball"
   },
   {
     "_id": "boxe",
@@ -13,7 +15,9 @@ export const IMAGES_DATA = [
     "title": "Boxe",
     "link": "./assets/images/activites/boxe.jpg",
     "favlink": "../assets/images/activites/boxe.jpg",
-    "alt": "Boxe Image"
+    "alt": "Boxe Image",
+    "comment": "Mouvement de jambes et crochet du droit",
+    "h1": "La Boxe"
   },
   {
     "_id": "crossfit",
@@ -21,7 +25,9 @@ export const IMAGES_DATA = [
     "title": "Crossfit",
     "link": "./assets/images/activites/crossfit.jpg",
     "favlink": "../assets/images/activites/crossfit.jpg",
-    "alt": "Crossfit Image"
+    "alt": "Crossfit Image",
+    "comment": "Pour devenir un athlète complet",
+    "h1": "Le Crossfit"
   },
   {
     "_id": "fitness",
@@ -29,7 +35,9 @@ export const IMAGES_DATA = [
     "title": "Fitness",
     "link": "./assets/images/activites/fitness.jpg",
     "favlink": "../assets/images/activites/fitness.jpg",
-    "alt": "Fitness Image"
+    "alt": "Fitness Image",
+    "comment": "Harmoniser son corps",
+    "h1": "Le Fitness"
   },
   {
     "_id": "karaté",
@@ -37,7 +45,9 @@ export const IMAGES_DATA = [
     "title": "Karaté",
     "link": "./assets/images/activites/karaté.jpg",
     "favlink": "../assets/images/activites/karaté.jpg",
-    "alt": "Karaté Image"
+    "alt": "Karaté Image",
+    "comment": "Les katas pour éviter la cata",
+    "h1": "Le Karaté"
   },
   {
     "_id": "musculation",
@@ -45,7 +55,9 @@ export const IMAGES_DATA = [
     "title": "Musculation",
     "link": "./assets/images/activites/musculation.jpg",
     "favlink": "../assets/images/activites/musculation.jpg",
-    "alt": "Musculation Image"
+    "alt": "Musculation Image",
+    "comment": "Aussi puissant qu'harmonieux",
+    "h1": "La Musculation"
   },
   {
     "_id": "canoe",
@@ -53,7 +65,9 @@ export const IMAGES_DATA = [
     "title": "Canoé",
     "link": "./assets/images/evenement/canoe.jpg",
     "favlink": "../assets/images/evenement/canoe.jpg",
-    "alt": "Canoe Image"
+    "alt": "Canoe Image",
+    "comment": "Descente des chutes éternelles",
+    "h1": "Le Canoé"
   },
   {
     "_id": "football",
@@ -61,7 +75,9 @@ export const IMAGES_DATA = [
     "title": "Football",
     "link": "./assets/images/evenement/football.jpg",
     "favlink": "../assets/images/evenement/football.jpg",
-    "alt": "Football Image"
+    "alt": "Football Image",
+    "comment": "Recrutement des nouveaux joueurs",
+    "h1": "Le Football"
   },
   {
     "_id": "motocross",
@@ -69,7 +85,9 @@ export const IMAGES_DATA = [
     "title": "Motocross",
     "link": "./assets/images/evenement/motocross.jpg",
     "favlink": "../assets/images/evenement/motocross.jpg",
-    "alt": "Motocross Image"
+    "alt": "Motocross Image",
+    "comment": "Enduro de la veille de l'automne",
+    "h1": "La Motocross"
   },
   {
     "_id": "plancheAvoile",
@@ -77,7 +95,9 @@ export const IMAGES_DATA = [
     "title": "Planche à voile",
     "link": "./assets/images/evenement/plancheAvoile.jpg",
     "favlink": "../assets/images/evenement/plancheAvoile.jpg",
-    "alt": "Planche à voile Image"
+    "alt": "Planche à voile Image",
+    "comment": "Exhibition intercontinentale des masters Pro",
+    "h1": "La Planche à Voile"
   },
   {
     "_id": "plongee",
@@ -85,7 +105,9 @@ export const IMAGES_DATA = [
     "title": "Plongée",
     "link": "./assets/images/evenement/plongée.jpg",
     "favlink": "../assets/images/evenement/plongée.jpg",
-    "alt": "Plongée Image"
+    "alt": "Plongée Image",
+    "comment": "Découverte des gorges insondables avec une équipe pro",
+    "h1": "La Plongée"
   },
   {
     "_id": "triathlon",
@@ -93,7 +115,9 @@ export const IMAGES_DATA = [
     "title": "Triathlon",
     "link": "./assets/images/evenement/triathlon.jpg",
     "favlink": "../assets/images/evenement/triathlon.jpg",
-    "alt": "Triathlon Image"
+    "alt": "Triathlon Image",
+    "comment": "Ironman de Noël",
+    "h1": "Le Triathlon"
   },
   {
     "_id": "natation",
@@ -101,7 +125,9 @@ export const IMAGES_DATA = [
     "title": "Natation",
     "link": "./assets/images/populaire/natation.jpg",
     "favlink": "../assets/images/populaire/natation.jpg",
-    "alt": "Natation Image"
+    "alt": "Natation Image",
+    "comment": "Force et justesse du mouvement",
+    "h1": "La Natation"
   },
   {
     "_id": "running",
@@ -109,7 +135,9 @@ export const IMAGES_DATA = [
     "title": "Running",
     "link": "./assets/images/populaire/running.jpg",
     "favlink": "../assets/images/populaire/running.jpg",
-    "alt": "Running Image"
+    "alt": "Running Image",
+    "comment": "Une paire de basket et à nous les grands espaces",
+    "h1": "La course à pied"
   },
   {
     "_id": "yoga",
@@ -117,6 +145,8 @@ export const IMAGES_DATA = [
     "title": "Yoga",
     "link": "./assets/images/populaire/yoga.jpg",
     "favlink": "../assets/images/populaire/yoga.jpg",
-    "alt": "Yoga Image"
+    "alt": "Yoga Image",
+    "comment": "Calme, méditation et musculation interne",
+    "h1": "Le Yoga" 
   }
 ]

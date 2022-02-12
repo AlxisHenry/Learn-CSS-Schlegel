@@ -3,6 +3,8 @@ import {
   INPUT_RESEARCH,
   THIS_CONTAIN_IMG,
   LowerValue_ID,
+  TITLE_IMAGE,
+  ADDITIONAL_DESCRIPTION,
 } from "./global.js";
 
 import { IMAGES_DATA } from "./data.js";
@@ -24,6 +26,8 @@ export function Verification_Research_Validity() {
   );
   if (DATA_CONTAIN) {
     INPUT_RESEARCH.classList.remove("border-error-animation");
+    TITLE_IMAGE.innerHTML = DATA_CONTAIN.h1;
+    ADDITIONAL_DESCRIPTION.innerHTML = DATA_CONTAIN.comment;
     THIS_CONTAIN_IMG.setAttribute("src", DATA_CONTAIN.link);
     THIS_CONTAIN_IMG.setAttribute("class", DATA_CONTAIN.class);
     THIS_CONTAIN_IMG.setAttribute("alt", DATA_CONTAIN.alt);

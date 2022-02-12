@@ -6,6 +6,8 @@ import {
   LowerValue_ID,
   THIS_CONTAIN_IMG,
   INPUT_RESEARCH,
+  ADDITIONAL_DESCRIPTION,
+  TITLE_IMAGE,
 } from "./global.js";
 import { IMAGES_DATA } from "./data.js";
 
@@ -71,6 +73,8 @@ export function SET_LAST_RESEARCH() {
       var THIS_IS_LAST_RESEARCH = IMAGES_DATA.find((x) => x._id === localStorage.getItem('last-research'));
 
       INPUT_RESEARCH.value = localStorage.getItem('last-research');
+      TITLE_IMAGE.innerHTML = THIS_IS_LAST_RESEARCH.h1;
+      ADDITIONAL_DESCRIPTION.innerHTML = THIS_IS_LAST_RESEARCH.comment;
 
       THIS_CONTAIN_IMG.setAttribute("src", THIS_IS_LAST_RESEARCH.link);
       THIS_CONTAIN_IMG.setAttribute("class", THIS_IS_LAST_RESEARCH.class);

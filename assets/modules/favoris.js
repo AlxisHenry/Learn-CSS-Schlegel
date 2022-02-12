@@ -62,7 +62,7 @@ export function GET_ALL_FAV() {
   for (let dif in items) {
     if (IMAGES_DATA.find((x) => x._id === dif)) {
       var DATA = IMAGES_DATA.find((x) => x._id === dif);
-      var FAV = `<img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p>
+      var FAV = `<img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p><span>${DATA.h1}</span><br><span>${DATA.comment}</span>
       <button style="width:10%;" class="remove-item-to-fav">Remove</button>`;
       SHOW_USERS_FAVS.insertAdjacentHTML("afterbegin", FAV);
       document.querySelector(".remove-item-to-fav").addEventListener("click", () => {
