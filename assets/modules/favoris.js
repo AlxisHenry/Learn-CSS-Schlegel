@@ -67,7 +67,7 @@ export function GET_ALL_FAV() {
       SHOW_USERS_FAVS.insertAdjacentHTML("afterbegin", FAV);
       document.querySelector(".remove-item-to-fav").addEventListener("click", () => {
           localStorage.removeItem(DATA._id);
-          window.location.reload();
+          window.location.reload(); 
         });
     }
   }

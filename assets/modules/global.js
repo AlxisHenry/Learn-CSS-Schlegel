@@ -24,3 +24,4 @@ export const SHOW_USER_ID = document.querySelector('.show-account-user-id');
 export const THIS_CONTAIN_IMG = document.querySelector('.show-search-img');
 export const TOGGLE_FAV_IMG = document.querySelectorAll('.toggle-fav-img');
 export const SHOW_USERS_FAVS = document.querySelector('.show-users-fav');
+export const EDIT_USER_ID = document.querySelector('.edit-account-user-id');

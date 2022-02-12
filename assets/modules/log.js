@@ -109,3 +109,8 @@ export function VERIFY_CONNECT_FOR_AUTHORIZE() {
       return true;
   }
 }
+
+export function EDIT_ACCOUNT_ID() {
+  localStorage.setItem("name", prompt('New ID?'));
+  window.location.reload(); 
+}
