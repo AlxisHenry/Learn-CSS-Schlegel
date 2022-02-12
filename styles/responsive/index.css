@@ -1,0 +1,12 @@
+@media screen and (max-width: 1200px) {
+    main {
+    grid-template-areas:"main"
+                        "main"
+                        "image"
+                        "footer";
+    grid-template-columns: repeat(1, 1fr);
+    }
+    body {
+        overflow-y: scroll;
+    }
+}

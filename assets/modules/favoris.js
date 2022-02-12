@@ -63,8 +63,12 @@ export function GET_ALL_FAV() {
     if (IMAGES_DATA.find((x) => x._id === dif)) {
       var DATA = IMAGES_DATA.find((x) => x._id === dif);
       var FAV = `<img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p>
-      <button onclick="" style="width:10%;" class="remove-item-to-fav">Remove</button>`;
+      <button style="width:10%;" class="remove-item-to-fav">Remove</button>`;
       SHOW_USERS_FAVS.insertAdjacentHTML("afterbegin", FAV);
+      document.querySelector(".remove-item-to-fav").addEventListener("click", () => {
+          localStorage.removeItem(DATA._id);
+          window.location.reload();
+        });
     }
   }
 }
