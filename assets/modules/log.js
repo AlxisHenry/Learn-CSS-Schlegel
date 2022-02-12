@@ -9,6 +9,7 @@ import {
   TOGGLE_CRYPTED_PASS,
   CRYPTED_PASS,
   SHOW_USER_ID,
+  EDIT_USER_ID,
 } from "./global.js";
 
 export function SHOW_ID(param) {
@@ -58,6 +59,8 @@ export function LOGOUT_USER() {
   SHOW_USER_ID.innerHTML = "";
   TOGGLE_CRYPTED_PASS[0].style.visibility = "hidden";
   TOGGLE_CRYPTED_PASS[1].style.visibility = "hidden";
+  EDIT_USER_ID.style.visibility = "hidden";
+
 }
 
 export function TOGGLE_VIEW_PW() {

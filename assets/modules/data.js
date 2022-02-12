@@ -34,10 +34,10 @@ export const IMAGES_DATA = [
   {
     "_id": "karaté",
     "class": "Activité",
-    "title": "Crossfit",
+    "title": "Karaté",
     "link": "./assets/images/activites/karaté.jpg",
     "favlink": "../assets/images/activites/karaté.jpg",
-    "alt": "Crossfit Image"
+    "alt": "Karaté Image"
   },
   {
     "_id": "musculation",

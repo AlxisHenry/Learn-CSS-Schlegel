@@ -12,12 +12,15 @@ import {
   VERIFY_FAV_STATUS,
 } from "./assets/modules/favoris.js";
 
+import { SAVE_LAST_RESEARCH, SET_LAST_RESEARCH } from "./assets/modules/history.js";
+
 SEARCH_ICON.addEventListener("click", () => {
   HISTORY_ADD();
   HISTORY_RESIZE();
   HISTORY_SHOW();
   RESEARCH_CONTENT();
   VERIFY_FAV_STATUS();
+  SAVE_LAST_RESEARCH();
 });
 
 TOGGLE_FAV_IMG[0].addEventListener("click", () => {
@@ -39,5 +42,6 @@ TOGGLE_FAV_IMG[1].addEventListener("click", () => {
 window.addEventListener("load", () => {
   SHOW_ID(LOCAL_GET_ID);
   TOGGLE_REGISTER();
+  SET_LAST_RESEARCH();
   VERIFY_FAV_STATUS();
 });

@@ -112,23 +112,23 @@ main {
 
 .this_contain_logo {
   grid-row: 1/3;
-  background-color: red;
+  /* background-color: red; */
 }
 
 
 .this_contain_notnav {
   grid-row: 2/3;
-  background-color: green;
+  /* background-color: green; */
 }
 
 
 .this_section_contain_image-grid {
   grid-area: image;
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 footer {
-  background-color: red;
+  /* background-color: red; */
   height: auto;
   grid-area: footer;
 }
