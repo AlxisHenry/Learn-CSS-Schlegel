@@ -62,13 +62,18 @@ export function GET_ALL_FAV() {
   for (let dif in items) {
     if (IMAGES_DATA.find((x) => x._id === dif)) {
       var DATA = IMAGES_DATA.find((x) => x._id === dif);
-      var FAV = `<img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p><span>${DATA.h1}</span><br><span>${DATA.comment}</span>
-      <button style="width:10%;" class="remove-item-to-fav">Remove</button>`;
+      var FAV = `<div class="this-items ${DATA._id}"> <img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p><span>${DATA.h1}</span><br><span>${DATA.comment}</span>
+      <button style="width:10%;" removethis="${DATA._id}" class="remove-item-from-fav">Remove</button></div>`;
       SHOW_USERS_FAVS.insertAdjacentHTML("afterbegin", FAV);
-      document.querySelector(".remove-item-to-fav").addEventListener("click", () => {
-          localStorage.removeItem(DATA._id);
-          window.location.reload(); 
-        });
+      const RemoveButton = document.querySelectorAll(`.${DATA._id}`);
+      console.log(RemoveButton[0].lastElementChild.getAttribute("removethis"));
+      RemoveButton[0].lastElementChild.addEventListener("click", () => {
+        // console.log(RemoveButton[0].lastElementChild.getAttribute('removethis'))
+        localStorage.removeItem(
+          RemoveButton[0].lastElementChild.getAttribute("removethis")
+        );
+        window.location.reload();
+      });
     }
   }
 }

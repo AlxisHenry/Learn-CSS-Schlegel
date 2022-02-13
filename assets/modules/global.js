@@ -27,3 +27,7 @@ export const SHOW_USERS_FAVS = document.querySelector('.show-users-fav');
 export const EDIT_USER_ID = document.querySelector('.edit-account-user-id');
 export const ADDITIONAL_DESCRIPTION = document.querySelector('.additional-description-of-img');
 export const TITLE_IMAGE = document.querySelector('.title-image');
+export const ADDING_SPORT_NAME = document.querySelector('.adding-sport-name');
+export const ADDING_SPORT_LINK = document.querySelector('.adding-sport-img-link');
+export const ADDING_SPORT_COMMENTARY = document.querySelector('.adding-sport-commentary');
+export const ADDING_SPORT_TITLE = document.querySelector('.adding-sport-title');

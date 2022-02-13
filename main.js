@@ -12,7 +12,10 @@ import {
   VERIFY_FAV_STATUS,
 } from "./assets/modules/favoris.js";
 
-import { SAVE_LAST_RESEARCH, SET_LAST_RESEARCH } from "./assets/modules/history.js";
+import {
+  SAVE_LAST_RESEARCH,
+  SET_LAST_RESEARCH,
+} from "./assets/modules/history.js";
 
 SEARCH_ICON.addEventListener("click", () => {
   HISTORY_ADD();
@@ -27,7 +30,7 @@ TOGGLE_FAV_IMG[0].addEventListener("click", () => {
   if (VERIFY_CONNECT_FOR_AUTHORIZE()) {
     LOCAL_STORAGE_FAV();
   } else {
-    alert('Non connecté');
+    alert("Non connecté");
   }
 });
 
@@ -35,7 +38,7 @@ TOGGLE_FAV_IMG[1].addEventListener("click", () => {
   if (VERIFY_CONNECT_FOR_AUTHORIZE()) {
     REMOVE_LOCAL_STORAGE_FAV();
   } else {
-    alert('Non connecté');
+    alert("Non connecté");
   }
 });
 
@@ -45,3 +48,18 @@ window.addEventListener("load", () => {
   SET_LAST_RESEARCH();
   VERIFY_FAV_STATUS();
 });
+
+var datatest = [];
+
+var datatoadd = [
+  {
+    _id: "yoga",
+    class: "Populaire",
+    title: "Yoga",
+    link: "./assets/images/populaire/yoga.jpg",
+    favlink: "../assets/images/populaire/yoga.jpg",
+    alt: "Yoga Image",
+    comment: "Calme, méditation et musculation interne",
+    h1: "Le Yoga",
+  },
+];

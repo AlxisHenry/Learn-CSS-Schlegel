@@ -60,7 +60,7 @@ export const IMAGES_DATA = [
     "h1": "La Musculation"
   },
   {
-    "_id": "canoe",
+    "_id": "canoé",
     "class": "Evénement",
     "title": "Canoé",
     "link": "./assets/images/evenement/canoe.jpg",
@@ -90,7 +90,7 @@ export const IMAGES_DATA = [
     "h1": "La Motocross"
   },
   {
-    "_id": "plancheAvoile",
+    "_id": "planche à voile",
     "class": "Evénement",
     "title": "Planche à voile",
     "link": "./assets/images/evenement/plancheAvoile.jpg",
@@ -100,7 +100,7 @@ export const IMAGES_DATA = [
     "h1": "La Planche à Voile"
   },
   {
-    "_id": "plongee",
+    "_id": "plongée",
     "class": "Evénement",
     "title": "Plongée",
     "link": "./assets/images/evenement/plongée.jpg",
