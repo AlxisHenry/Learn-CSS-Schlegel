@@ -32,3 +32,4 @@ export const ADDING_SPORT_NAME = document.querySelector('.adding-sport-name');
 export const ADDING_SPORT_LINK = document.querySelector('.adding-sport-img-link');
 export const ADDING_SPORT_COMMENTARY = document.querySelector('.adding-sport-commentary');
 export const ADDING_SPORT_TITLE = document.querySelector('.adding-sport-title');
+export const ADDING_SPORT_CLASS = document.querySelector('.adding-sport-class');

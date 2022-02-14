@@ -1,7 +1,7 @@
 export const IMAGES_DATA = [
   {
     "_id": "basketball",
-    "class": "Activité",
+    "class": "activity",
     "title": "Basketball",
     "link": "./assets/images/activites/basketball.jpg",
     "favlink": "../assets/images/activites/basketball.jpg",
@@ -11,7 +11,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "boxe",
-    "class": "Activité",
+    "class": "activity",
     "title": "Boxe",
     "link": "./assets/images/activites/boxe.jpg",
     "favlink": "../assets/images/activites/boxe.jpg",
@@ -21,7 +21,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "crossfit",
-    "class": "Activié",
+    "class": "activity",
     "title": "Crossfit",
     "link": "./assets/images/activites/crossfit.jpg",
     "favlink": "../assets/images/activites/crossfit.jpg",
@@ -31,7 +31,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "fitness",
-    "class": "Activié",
+    "class": "activity",
     "title": "Fitness",
     "link": "./assets/images/activites/fitness.jpg",
     "favlink": "../assets/images/activites/fitness.jpg",
@@ -41,7 +41,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "karaté",
-    "class": "Activité",
+    "class": "activity",
     "title": "Karaté",
     "link": "./assets/images/activites/karaté.jpg",
     "favlink": "../assets/images/activites/karaté.jpg",
@@ -51,7 +51,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "musculation",
-    "class": "Activité",
+    "class": "activity",
     "title": "Musculation",
     "link": "./assets/images/activites/musculation.jpg",
     "favlink": "../assets/images/activites/musculation.jpg",
@@ -61,7 +61,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "canoé",
-    "class": "Evénement",
+    "class": "events",
     "title": "Canoé",
     "link": "./assets/images/evenement/canoe.jpg",
     "favlink": "../assets/images/evenement/canoe.jpg",
@@ -71,7 +71,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "football",
-    "class": "Evénement",
+    "class": "events",
     "title": "Football",
     "link": "./assets/images/evenement/football.jpg",
     "favlink": "../assets/images/evenement/football.jpg",
@@ -81,7 +81,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "motocross",
-    "class": "Evénement",
+    "class": "events",
     "title": "Motocross",
     "link": "./assets/images/evenement/motocross.jpg",
     "favlink": "../assets/images/evenement/motocross.jpg",
@@ -92,7 +92,7 @@ export const IMAGES_DATA = [
   {
     "_id": "planche à voile",
     "this_element": "planch-à-voile",
-    "class": "Evénement",
+    "class": "events",
     "title": "Planche à voile",
     "link": "./assets/images/evenement/plancheAvoile.jpg",
     "favlink": "../assets/images/evenement/plancheAvoile.jpg",
@@ -102,7 +102,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "plongée",
-    "class": "Evénement",
+    "class": "events",
     "title": "Plongée",
     "link": "./assets/images/evenement/plongée.jpg",
     "favlink": "../assets/images/evenement/plongée.jpg",
@@ -112,7 +112,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "triathlon",
-    "class": "Evénement",
+    "class": "events",
     "title": "Triathlon",
     "link": "./assets/images/evenement/triathlon.jpg",
     "favlink": "../assets/images/evenement/triathlon.jpg",
