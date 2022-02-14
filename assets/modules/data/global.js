@@ -33,3 +33,4 @@ export const ADDING_SPORT_LINK = document.querySelector('.adding-sport-img-link'
 export const ADDING_SPORT_COMMENTARY = document.querySelector('.adding-sport-commentary');
 export const ADDING_SPORT_TITLE = document.querySelector('.adding-sport-title');
 export const ADDING_SPORT_CLASS = document.querySelector('.adding-sport-class');
+export const GET_URL_CLASS  = new URLSearchParams(window.location.search).get("class");

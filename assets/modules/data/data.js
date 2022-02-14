@@ -122,7 +122,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "natation",
-    "class": "Populaire",
+    "class": "populaire",
     "title": "Natation",
     "link": "./assets/images/populaire/natation.jpg",
     "favlink": "../assets/images/populaire/natation.jpg",
@@ -132,7 +132,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "running",
-    "class": "Populaire",
+    "class": "populaire",
     "title": "Running",
     "link": "./assets/images/populaire/running.jpg",
     "favlink": "../assets/images/populaire/running.jpg",
@@ -142,7 +142,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "yoga",
-    "class": "Populaire",
+    "class": "populaire",
     "title": "Yoga",
     "link": "./assets/images/populaire/yoga.jpg",
     "favlink": "../assets/images/populaire/yoga.jpg",

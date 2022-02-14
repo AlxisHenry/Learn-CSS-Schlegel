@@ -1,22 +1,22 @@
-import { Adding_to_Research_History as HISTORY_ADD } from "./assets/modules/history.js";
-import { Resize_Research_History as HISTORY_RESIZE } from "./assets/modules/history.js";
-import { Show_Research_History as HISTORY_SHOW } from "./assets/modules/history.js";
-import { Verification_Research_Content as RESEARCH_CONTENT } from "./assets/modules/routes.js";
-import { this_contain_href as SEARCH_ICON } from "./assets/modules/global.js";
-import { SHOW_ID, VERIFY_CONNECT_FOR_AUTHORIZE } from "./assets/modules/log.js";
-import { LOCAL_GET_ID, TOGGLE_FAV_IMG } from "./assets/modules/global.js";
-import { TOGGLE_REGISTER } from "./assets/modules/log.js";
+import { Adding_to_Research_History as HISTORY_ADD } from "../assets/modules/history.js";
+import { Resize_Research_History as HISTORY_RESIZE } from "../assets/modules/history.js";
+import { Show_Research_History as HISTORY_SHOW } from "../assets/modules/history.js";
+import { Verification_Research_Content as RESEARCH_CONTENT } from "../assets/modules/routes.js";
+import { this_contain_href as SEARCH_ICON } from "../assets/modules/data/global.js";
+import { SHOW_ID, VERIFY_CONNECT_FOR_AUTHORIZE } from "../assets/modules/log.js";
+import { LOCAL_GET_ID, TOGGLE_FAV_IMG } from "../assets/modules/data/global.js";
+import { TOGGLE_REGISTER } from "../assets/modules/log.js";
 import {
   LOCAL_STORAGE_FAV,
   REMOVE_LOCAL_STORAGE_FAV,
   VERIFY_FAV_STATUS,
-} from "./assets/modules/favoris.js";
+} from "../assets/modules/favoris.js";
 
 import {
   SAVE_LAST_RESEARCH,
   SET_LAST_RESEARCH,
   _SHOW_LOCAL_STORAGE_HISTORY,
-} from "./assets/modules/history.js";
+} from "../assets/modules/history.js";
 
 SEARCH_ICON.addEventListener("click", () => {
   HISTORY_ADD();

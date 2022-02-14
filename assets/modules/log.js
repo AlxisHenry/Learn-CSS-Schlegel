@@ -10,7 +10,7 @@ import {
   CRYPTED_PASS,
   SHOW_USER_ID,
   EDIT_USER_ID,
-} from "./global.js";
+} from "./data/global.js";
 
 export function SHOW_ID(param) {
   SHOW_USER_NAME.innerHTML = param;

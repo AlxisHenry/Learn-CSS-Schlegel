@@ -9,8 +9,8 @@ import {
   ADDITIONAL_DESCRIPTION,
   TITLE_IMAGE,
   LOCAL_GET_HISTORY,
-} from "./global.js";
-import { IMAGES_DATA } from "./data.js";
+} from "./data/global.js";
+import { IMAGES_DATA } from "./data/data.js";
 
 export function Adding_to_Research_History() {
   if (Research_History.includes(LowerValue_ID(this_find_sport.value))) {

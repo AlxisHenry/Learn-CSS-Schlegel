@@ -5,11 +5,11 @@ import {
   TOGGLE_PW_HIDDEN,
   TOGGLE_PW_VISIBLE,
   EDIT_ACCOUNT_ID,
-} from "./log.js";
+} from "../assets/modules/log.js";
 
-import { GET_ALL_FAV } from "./favoris.js";
+import { GET_ALL_FAV } from "../assets/modules/favoris.js";
 
-import { CANCEL_USER_CONNECTION, TOGGLE_CRYPTED_PASS, EDIT_USER_ID } from "./global.js";
+import { CANCEL_USER_CONNECTION, TOGGLE_CRYPTED_PASS, EDIT_USER_ID } from "../assets/modules/data/global.js";
 
 window.addEventListener("load", () => {
   TOGGLE_VIEW_PW();

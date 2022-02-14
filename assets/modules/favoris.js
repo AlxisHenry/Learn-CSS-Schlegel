@@ -1,7 +1,7 @@
 // Ajout d'une image aux favoris
 
-import { THIS_CONTAIN_IMG, TOGGLE_FAV_IMG, SHOW_USERS_FAVS } from "./global.js";
-import { IMAGES_DATA } from "./data.js";
+import { THIS_CONTAIN_IMG, TOGGLE_FAV_IMG, SHOW_USERS_FAVS } from "./data/global.js";
+import { IMAGES_DATA } from "./data/data.js";
 
 export function VERIFY_FAV_STATUS() {
   var DATA_CONTAIN = IMAGES_DATA.find((x) => x._id === THIS_CONTAIN_IMG.id);

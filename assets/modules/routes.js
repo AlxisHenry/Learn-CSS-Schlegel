@@ -5,9 +5,9 @@ import {
   LowerValue_ID,
   TITLE_IMAGE,
   ADDITIONAL_DESCRIPTION,
-} from "./global.js";
+} from "./data/global.js";
 
-import { IMAGES_DATA } from "./data.js";
+import { IMAGES_DATA } from "./data/data.js";
 
 export function Verification_Research_Content() {
   if (this_find_sport.value === "") {
