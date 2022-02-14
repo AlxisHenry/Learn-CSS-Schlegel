@@ -15,6 +15,7 @@ import {
 import {
   SAVE_LAST_RESEARCH,
   SET_LAST_RESEARCH,
+  _SHOW_LOCAL_STORAGE_HISTORY,
 } from "./assets/modules/history.js";
 
 SEARCH_ICON.addEventListener("click", () => {
@@ -47,19 +48,5 @@ window.addEventListener("load", () => {
   TOGGLE_REGISTER();
   SET_LAST_RESEARCH();
   VERIFY_FAV_STATUS();
+  _SHOW_LOCAL_STORAGE_HISTORY();  
 });
-
-var datatest = [];
-
-var datatoadd = [
-  {
-    _id: "yoga",
-    class: "Populaire",
-    title: "Yoga",
-    link: "./assets/images/populaire/yoga.jpg",
-    favlink: "../assets/images/populaire/yoga.jpg",
-    alt: "Yoga Image",
-    comment: "Calme, méditation et musculation interne",
-    h1: "Le Yoga",
-  },
-];

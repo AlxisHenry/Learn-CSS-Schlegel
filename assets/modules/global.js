@@ -15,6 +15,7 @@ export const GET_NAME = document.querySelector('#getname');
 export const GET_PSWD = document.querySelector('#getpswd');
 export const LOCAL_GET_ID = localStorage.getItem('name'); // GET USER NAME
 export const LOCAL_GET_PW = localStorage.getItem('pass'); // GET USER PASS
+export const LOCAL_GET_HISTORY = localStorage.getItem('HistoryResearch'); // GET RESEARCH HISTORY
 export const ACCOUNT_REGISTER = document.querySelector('.toggle-account-register');
 export const CANCEL_RETURN_INDEX = document.querySelector('.href-return-index')
 export const CANCEL_USER_CONNECTION = document.querySelector('.cancel-user-connection');

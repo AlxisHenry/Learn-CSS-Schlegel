@@ -91,6 +91,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "planche à voile",
+    "this_element": "planch-à-voile",
     "class": "Evénement",
     "title": "Planche à voile",
     "link": "./assets/images/evenement/plancheAvoile.jpg",

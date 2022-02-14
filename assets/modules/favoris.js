@@ -52,8 +52,12 @@ export function GET_ALL_FAV() {
   // var GET = localStorage.getItem(`${DATA_CONTAIN._id}`);
   var items = { ...localStorage };
 
-  delete items.name;
-  delete items.pass;
+  for (let deleteThis in items) {
+    if (!IMAGES_DATA.find((x) => x._id === deleteThis)) {
+      delete items[deleteThis];
+    } else {
+    }
+  }
 
   if (Object.keys(items).length === 0 && items.constructor === Object) {
     SHOW_USERS_FAVS.innerHTML = "No Favoris Found";
@@ -62,17 +66,39 @@ export function GET_ALL_FAV() {
   for (let dif in items) {
     if (IMAGES_DATA.find((x) => x._id === dif)) {
       var DATA = IMAGES_DATA.find((x) => x._id === dif);
-      var FAV = `<div class="this-items ${DATA._id}"> <img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p><span>${DATA.h1}</span><br><span>${DATA.comment}</span>
-      <button style="width:10%;" removethis="${DATA._id}" class="remove-item-from-fav">Remove</button></div>`;
+
+      if (!DATA.this_element) {
+        var FAV = `<div class="this-items ${DATA._id}"> <img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p><span>${DATA.h1}</span><br><span>${DATA.comment}</span>
+        <button style="width:10%;" removethis="${DATA._id}" class="remove-item-from-fav">Remove</button></div>`;
+      } else {
+        var FAV = `<div class="this-items ${DATA.this_element}"> <img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p><span>${DATA.h1}</span><br><span>${DATA.comment}</span>
+        <button style="width:10%;" removethis="${DATA._id}" class="remove-item-from-fav">Remove</button></div>`;
+      }
+
       SHOW_USERS_FAVS.insertAdjacentHTML("afterbegin", FAV);
-      const RemoveButton = document.querySelectorAll(`.${DATA._id}`);
-      console.log(RemoveButton[0].lastElementChild.getAttribute("removethis"));
-      RemoveButton[0].lastElementChild.addEventListener("click", () => {
-        // console.log(RemoveButton[0].lastElementChild.getAttribute('removethis'))
-        localStorage.removeItem(
-          RemoveButton[0].lastElementChild.getAttribute("removethis")
-        );
-        window.location.reload();
+
+      if (!DATA.this_element) {
+        var RemoveButton = document.querySelectorAll(`.${DATA._id}`);
+      } else {
+        var RemoveButton = document.querySelectorAll(`.${DATA.this_element}`);
+      }
+
+      //// RemoveButton[0].lastChild.addEventListener("click", () => {
+      ////   console.log(
+      ////     RemoveButton[0].lastElementChild.getAttribute("removethis")
+      ////   );
+      ////   localStorage.removeItem(
+      ////   RemoveButton[0].lastElementChild.getAttribute("removethis")
+      //// );
+      //// window.location.reload();
+      //// });
+
+      RemoveButton.forEach((buttonEvent) => {
+        buttonEvent.addEventListener("click", (e) => {
+          console.log(e.target.getAttribute("removethis"));
+          localStorage.removeItem(e.target.getAttribute("removethis"));
+          window.location.reload();
+        });
       });
     }
   }
