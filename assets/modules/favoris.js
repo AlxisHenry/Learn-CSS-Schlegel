@@ -68,7 +68,7 @@ export function GET_ALL_FAV() {
       var DATA = IMAGES_DATA.find((x) => x._id === dif);
 
       if (!DATA.this_element) {
-        var FAV = `<div class="this-items ${DATA._id}"> <img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p><span>${DATA.h1}</span><br><span>${DATA.comment}</span>
+        var FAV = `<div class="this-items"> <img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p><span>${DATA.h1}</span><br><span>${DATA.comment}</span>
         <button style="width:10%;" removethis="${DATA._id}" class="remove-item-from-fav">Remove</button></div>`;
       } else {
         var FAV = `<div class="this-items ${DATA.this_element}"> <img src=${DATA.favlink} style="width: 202px"><p>${DATA.title}</p><span>${DATA.h1}</span><br><span>${DATA.comment}</span>
@@ -77,11 +77,7 @@ export function GET_ALL_FAV() {
 
       SHOW_USERS_FAVS.insertAdjacentHTML("afterbegin", FAV);
 
-      if (!DATA.this_element) {
-        var RemoveButton = document.querySelectorAll(`.${DATA._id}`);
-      } else {
-        var RemoveButton = document.querySelectorAll(`.${DATA.this_element}`);
-      }
+      var RemoveButton = document.querySelectorAll('.remove-item-from-fav');
 
       //// RemoveButton[0].lastChild.addEventListener("click", () => {
       ////   console.log(
