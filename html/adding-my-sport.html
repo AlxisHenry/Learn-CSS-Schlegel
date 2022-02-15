@@ -8,11 +8,18 @@
 </head>
 <body>
     <section>
-        <input class="name-of-event" type="text"></input>
+        <input class="name-of-event" placeholder="Un commentaire ?" type="text"></input>
         <input type="datetime-local" class="date-to-start-event" name="trip-start"
             value=""
             min="" max="">
         <select class="create-event"></select>
+        <select class="duration-of-event">
+            <option disabled selected value>Selectionner la durée</option>
+            <option value="Moins d'une heure">Moins d'une heure</option>
+            <option value="Plus d'une heure">Plus d'une heure</option>
+            <option value="Une demi journée">Une demi journée !</option>
+            <option value="Toute la journée">Toute la journée !</option>
+        </select>
         <input class="submit-event" type="submit"></input>
      </section>
 

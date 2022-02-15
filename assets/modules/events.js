@@ -6,6 +6,7 @@ import {
   DATE_OF_EVENT,
   CREATE_EVENT_NAME,
   SECTION_USER_EVENTS,
+  DURATION_USER_EVENT,
 } from "./data/global.js";
 
 export function CREATE_SELECT_OPTIONS() {
@@ -27,12 +28,14 @@ export function UPDATE_DATE() {
 export function GET_ALL_VALUES() {
   const EVENT_NAME = CREATE_EVENT_NAME.value;
   const EVENT_SPORT = CREATE_USER_EVENT.value;
+  const EVENT_DURRATION = DURATION_USER_EVENT.value;
   var EVENT_DATE = new Date(DATE_OF_EVENT.value).toString().slice(4, 21);
 
   const EVENT_OBJECT = {
     _id: EVENT_SPORT,
     date: EVENT_DATE,
     name: EVENT_NAME,
+    duration: EVENT_DURRATION,
   };
 
   if (localStorage.getItem(`Event: ${EVENT_SPORT}`)) {
@@ -61,7 +64,8 @@ export async function SHOW_USER_EVENTS() {
             <p class="title">${GET_EVENT_SIMILAR_ID.h1}</p>
             <img style="width: 120px;" alt="${GET_EVENT_SIMILAR_ID.alt}" src="${GET_EVENT_SIMILAR_ID.favlink}"><br>
             <span class="this-contain-date ${EVENTS_EXISTS[i]._id}">${EVENTS_EXISTS[i].date}</span><br>
-            <span class="this-contain-name ${EVENTS_EXISTS[i]._id}">${EVENTS_EXISTS[i].name}</span>`;
+            <span class="this-contain-name ${EVENTS_EXISTS[i]._id}">${EVENTS_EXISTS[i].name}</span><br>
+            <span class="this-contain-duration ${EVENTS_EXISTS[i]._id}">${EVENTS_EXISTS[i].duration}</span>`;
 
     SECTION_USER_EVENTS.insertAdjacentHTML("afterbegin", EVENT_INPROGRESS);
   }

@@ -41,3 +41,4 @@ export const DATE_FORMAT = new Date(Date.now()).toISOString().split("T")[0];
 export const CREATE_EVENT_NAME = document.querySelector('.name-of-event');
 export const SUBMIT_THIS_EVENT = document.querySelector('.submit-event');
 export const SECTION_USER_EVENTS = document.querySelector('.show-all-created-events');
+export const DURATION_USER_EVENT = document.querySelector('.duration-of-event');
