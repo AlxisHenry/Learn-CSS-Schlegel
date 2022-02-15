@@ -10,6 +10,7 @@ import {
   CRYPTED_PASS,
   SHOW_USER_ID,
   EDIT_USER_ID,
+  SHOW_USERS_FAVS,
 } from "./data/global.js";
 
 export function SHOW_ID(param) {
@@ -53,14 +54,17 @@ export function ADD_TO_LOCALSTORAGE() {
 }
 
 export function LOGOUT_USER() {
-  localStorage.clear();
-  // window.location.reload();
-  CRYPTED_PASS.innerHTML = "Vous avez été déconnecté !";
-  SHOW_USER_ID.innerHTML = "";
-  TOGGLE_CRYPTED_PASS[0].style.visibility = "hidden";
-  TOGGLE_CRYPTED_PASS[1].style.visibility = "hidden";
-  EDIT_USER_ID.style.visibility = "hidden";
-
+  if (confirm("Cela va supprimer toutes vos données !")) {
+    localStorage.clear();
+    CRYPTED_PASS.innerHTML = "Vous avez été déconnecté !";
+    SHOW_USER_ID.innerHTML = "";
+    TOGGLE_CRYPTED_PASS[0].style.visibility = "hidden";
+    TOGGLE_CRYPTED_PASS[1].style.visibility = "hidden";
+    EDIT_USER_ID.style.visibility = "hidden";
+    SHOW_USERS_FAVS.style.visibility = "hidden";
+  } else {
+    return false;
+  }
 }
 
 export function TOGGLE_VIEW_PW() {
@@ -107,17 +111,17 @@ export function TOGGLE_PW_HIDDEN() {
 
 export function VERIFY_CONNECT_FOR_AUTHORIZE() {
   if (!LOCAL_GET_ID) {
-      return false;
-  } else {  
-      return true;
+    return false;
+  } else {
+    return true;
   }
 }
 
 export function EDIT_ACCOUNT_ID() {
-  var NEW_ID_VALUE = prompt('New ID?');
+  var NEW_ID_VALUE = prompt("New ID?");
   if (!NEW_ID_VALUE) {
-    NEW_ID_VALUE = localStorage.getItem('name');
+    NEW_ID_VALUE = localStorage.getItem("name");
   }
   localStorage.setItem("name", NEW_ID_VALUE);
-  window.location.reload(); 
+  window.location.reload();
 }

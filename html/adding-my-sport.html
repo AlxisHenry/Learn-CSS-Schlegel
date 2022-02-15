@@ -7,21 +7,14 @@
     <title>Je présente mon sport !</title>
 </head>
 <body>
-    <div class="adding-my-sport">
-
-    <input type="text" class="adding-sport-name" placeholder="Nom" required></input>
-    <select class="adding-sport-class" required>
-        <option disabled selected value> -- select an option -- </option>
-        <option value="Activité">Activité</option>
-        <option value="Evénement">Evénement</option>
-        <option value="Populaire">Populaire</option>
-    </select>
-    <input type="text" class="adding-sport-img-link" placeholder="Link to image" required>
-    <input type="text" class="adding-sport-commentary" placeholder="Commentaire" required></input>
-    <input type="text" class="adding-sport-title" placeholder="Title" required></input>
-    <a class="href-return-index" href="#"><button id="submit" type="submit">Login</button></a>
-
-    </div>
+    <section>
+        <input class="name-of-event" type="text"></input>
+        <input type="datetime-local" class="date-to-start-event" name="trip-start"
+            value=""
+            min="" max="">
+        <select class="create-event"></select>
+        <input class="submit-event" type="submit"></input>
+     </section>
 
     <!-- "_id": "basketball",
     "class": "Activité",
@@ -32,6 +25,6 @@
     "comment": "Gérer le ballon",
     "h1": "Le Basketball" -->
 
-<script type="module" src=""></script>
+<script type="module" src="../js/app.js"></script>
 </body>
 </html>

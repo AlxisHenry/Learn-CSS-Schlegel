@@ -23,44 +23,29 @@ body {
   background-size: 100% 24px, 24px 100%;
 }
 
-#this_contain_header {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: auto;
-  background-color:blue;
-}
+/** -------------  HEADER -------------- */
 
-main {
-  height: 100%  ;
-  background-color: red;
+.this_contain_header {
+  width: 100%;
+  height: auto;
 }
 
 .navbar {
   display: flex;
   width: 100%;
   height: 80px;
-  justify-content: center;
-
-  position: absolute;
-  top: 0;
   z-index: 1;
-  box-shadow: 0 0 10px #000000;
-  background-color: lightgray;
+  box-shadow: 0 0 12px #000000;
+  background-color: lightgoldenrodyellow;
 }
 
 .navbar ul {
   display: flex;
   position: relative;
   list-style-type: none;
-  margin: 25px;
-  /* background-color: red; */
-  justify-content: space-between;
+  margin: 30px;
+  justify-content: space-around;
   width: 100%;
-}
-
-.navbar ul li:first-child {
-  margin-left: 5%;
 }
 
 .navbar ul li:last-child {
@@ -74,63 +59,42 @@ main {
   margin-bottom: 5px;
 }
 
-.research-sport {
-  width: 150px;
-  height: 20px;
-  border-radius: 10px;
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  font-size: 18px;
+  border: outset;
+  padding: 7px;
+  border-radius: 20px;
 }
-
 
 .user-img {
   width: 25px;
   height: 25px;
-  /* position: absolute; */
-  /* top:25px; */
-  /* right: 60px;  */
 }
+
+/*! -------------  HEADER -------------- */
+/** --------------  MAIN -------------- */
 
 main {
-  display: grid;
-  height: 100vh;
-  width: 100vw;
-  grid-template-areas:
-    "main image"
-    "main image"
-    "footer footer";
-  grid-template-columns: repeat(2, 1fr);
-  /* grid-template-columns: 50% 1fr; */
-  /* grid-template-rows: 20px; */
-}
-
-.this_contain_logo,
-.this_contain_notnav {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  grid-area: main;
+  height: 100%;
+  width: 100%;
 }
 
 .this_contain_logo {
-  grid-row: 1/3;
-  grid-column: 1/2;
+  width: 100%; 
+  height: auto;
+  padding: 12px;
 }
 
-
-.this_contain_notnav {
-  grid-row: 2/3;
-  grid-column: 1/2;
+.research-sport {
+  width: 12vw;
+  height: 20px;
+  border-radius: 10px;
 }
 
-
-.this_section_contain_image-grid {
-  grid-area: image;
-}
-
-footer {
-  display: flex;
-  grid-row: 3/3;
-  grid-area: footer;
-}
+/*! --------------  MAIN -------------- */
 
 .this_section_contain_image-grid > img {
   width: 300px;
@@ -141,11 +105,17 @@ footer {
   width: auto;
   height: 500px;
   margin-bottom: 4em;
-  display: grid;
-  grid-template-columns: repeat(3, 0.1fr);
+
+  background-color: blue;
 }
 
-.img {
-  max-width: 200px;
-  max-height: 200px;
+.show-search-img {
+  max-width: 100%;
+  max-height: 100;
+}
+
+.toggle-fav-img {
+  max-height: 20px;
+  background-color: blue;
+  max-width: 20px;
 }
