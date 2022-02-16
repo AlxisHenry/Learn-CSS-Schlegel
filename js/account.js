@@ -10,13 +10,14 @@ import {
 import { GET_ALL_FAV } from "../assets/modules/favoris.js";
 
 import { CANCEL_USER_CONNECTION, TOGGLE_CRYPTED_PASS, EDIT_USER_ID, SUBMIT_THIS_EVENT } from "../assets/modules/data/global.js";
-import { SHOW_USER_EVENTS } from "../assets/modules/events.js";
+import { CANCEL_EXPIRED_EVENTS, SHOW_USER_EVENTS } from "../assets/modules/events.js";
 
 window.addEventListener("load", () => {
   TOGGLE_VIEW_PW();
   TOGGLE_VIEW_ID();
   GET_ALL_FAV();
   SHOW_USER_EVENTS();
+  CANCEL_EXPIRED_EVENTS();
 });
 
 // Hide-Show password

@@ -31,9 +31,13 @@ export function GET_ALL_VALUES() {
   const EVENT_DURRATION = DURATION_USER_EVENT.value;
   var EVENT_DATE = new Date(DATE_OF_EVENT.value).toString().slice(4, 21);
 
+  const GET_EVENT_SIMILAR_ID = IMAGES_DATA.find((x) => x._id === EVENT_SPORT);
+  const EVENT_CHECK_DATE = GET_EVENT_SIMILAR_ID.check_date;
+
   const EVENT_OBJECT = {
     _id: EVENT_SPORT,
     date: EVENT_DATE,
+    check_date: EVENT_CHECK_DATE,
     name: EVENT_NAME,
     duration: EVENT_DURRATION,
   };
@@ -76,6 +80,7 @@ export async function SHOW_USER_EVENTS() {
     CHECK_EVENTS.constructor === Object
   ) {
     SECTION_USER_EVENTS.innerHTML = "No Event Create";
+    return false;
   }
 
   for (var i = 0; i < EVENTS_EXISTS.length; i++) {
@@ -104,20 +109,57 @@ export async function SHOW_USER_EVENTS() {
       SECTION_USER_EVENTS.insertAdjacentHTML("afterbegin", EVENT_INPROGRESS);
     }
 
-
-    var CANCEL_EVENT_BUTTON = document.querySelectorAll('.cancel-this-event');
-
-    // CANCEL_EVENT_BUTTON
+    var CANCEL_EVENT_BUTTON = document.querySelectorAll(".cancel-this-event");
 
     CANCEL_EVENT_BUTTON.forEach((buttonEvent) => {
       buttonEvent.addEventListener("click", (e) => {
-        console.log('event');
+        console.log("event");
         localStorage.removeItem(
           `Event: ${e.target.getAttribute("removethis")}`
         );
         window.location.reload();
       });
     });
-    
+  }
+}
+
+export function CANCEL_EXPIRED_EVENTS() {
+  const EVENTS_EXISTS = new Array();
+
+  for (var sport in ALL_SPORTS_NAME) {
+    if (!localStorage.getItem(`Event: ${ALL_SPORTS_NAME[sport]}`)) {
+    } else {
+      EVENTS_EXISTS.push(
+        JSON.parse(localStorage.getItem(`Event: ${ALL_SPORTS_NAME[sport]}`))
+      );
+    }
+  }
+
+  const CHECK_EVENTS = { ...localStorage };
+
+  for (let deleteThis in CHECK_EVENTS) {
+    if (!CHECK_EVENTS[deleteThis].includes('"date"')) {
+      delete CHECK_EVENTS[deleteThis];
+    } else {
+    }
+  }
+
+  if (
+    Object.keys(CHECK_EVENTS).length === 0 &&
+    CHECK_EVENTS.constructor === Object
+  ) {
+    SECTION_USER_EVENTS.innerHTML = "No Event Create";
+    return false;
+  }
+
+  for (var i = 0; i < EVENTS_EXISTS.length; i++) {
+    const VERIFY_DATE_OF_EVENT = new Date(EVENTS_EXISTS[i].date);
+    if (VERIFY_DATE_OF_EVENT > new Date()) {
+    } else {
+      document.querySelector(
+        `.${EVENTS_EXISTS[i].check_date}`
+      ).innerHTML = `Event Finished: ${EVENTS_EXISTS[i]._id} le ${EVENTS_EXISTS[i].date}`;
+      localStorage.removeItem(`Event: ${EVENTS_EXISTS[i]._id}`);
+    }
   }
 }

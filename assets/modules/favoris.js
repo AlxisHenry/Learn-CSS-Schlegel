@@ -61,6 +61,7 @@ export function GET_ALL_FAV() {
 
   if (Object.keys(items).length === 0 && items.constructor === Object) {
     SHOW_USERS_FAVS.innerHTML = "No Favoris Found";
+    return false;
   }
 
   for (let dif in items) {
@@ -99,3 +100,4 @@ export function GET_ALL_FAV() {
     }
   }
 }
+

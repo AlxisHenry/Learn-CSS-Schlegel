@@ -61,6 +61,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "canoé",
+    "check_date": "canoé",
     "class": "events",
     "title": "Canoé",
     "link": "./assets/images/evenement/canoe.jpg",
@@ -71,6 +72,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "football",
+    "check_date": "football",
     "class": "events",
     "title": "Football",
     "link": "./assets/images/evenement/football.jpg",
@@ -81,6 +83,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "motocross",
+    "check_date": "motocross",
     "class": "events",
     "title": "Motocross",
     "link": "./assets/images/evenement/motocross.jpg",
@@ -92,6 +95,7 @@ export const IMAGES_DATA = [
   {
     "_id": "planche à voile",
     "this_element": "planche-à-voile",
+    "check_date": "planche-à-voile",
     "class": "events",
     "title": "Planche à voile",
     "link": "./assets/images/evenement/plancheAvoile.jpg",
@@ -102,6 +106,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "plongée",
+    "check_date": "plongée",
     "class": "events",
     "title": "Plongée",
     "link": "./assets/images/evenement/plongée.jpg",
@@ -112,6 +117,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "triathlon",
+    "check_date": "triathlon",
     "class": "events",
     "title": "Triathlon",
     "link": "./assets/images/evenement/triathlon.jpg",
