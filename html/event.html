@@ -8,12 +8,12 @@
 </head>
 <body>
     <section>
-        <input class="name-of-event" placeholder="Un commentaire ?" type="text">
-        <input type="datetime-local" class="date-to-start-event" name="trip-start">
-        <select class="create-event">
+        <input class="name-of-event" placeholder="Un commentaire ?" type="text" required>
+        <input type="datetime-local" class="date-to-start-event" name="trip-start" required>
+        <select class="create-event" required>
             <option disabled selected value>Selectionner le sport</option>
         </select>
-        <select class="duration-of-event">
+        <select class="duration-of-event" required>
             <option disabled selected value>Selectionner la durée</option>
             <option value="Moins d'une heure">Moins d'une heure</option>
             <option value="Plus d'une heure">Plus d'une heure</option>
@@ -23,6 +23,12 @@
         <input class="submit-event" type="submit">
         </section>
 
+
+        <section class="confirmation-adding-event">
+
+        </section>
+
 <script type="module" src="../js/app.js"></script>
+
 </body>
 </html>

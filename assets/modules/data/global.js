@@ -42,3 +42,4 @@ export const CREATE_EVENT_NAME = document.querySelector('.name-of-event');
 export const SUBMIT_THIS_EVENT = document.querySelector('.submit-event');
 export const SECTION_USER_EVENTS = document.querySelector('.show-all-created-events');
 export const DURATION_USER_EVENT = document.querySelector('.duration-of-event');
+export const CONFIRMATION_ADDING_EVENT = document.querySelector('.confirmation-adding-event');

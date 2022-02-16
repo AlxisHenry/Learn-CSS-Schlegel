@@ -7,6 +7,7 @@ import {
   CREATE_EVENT_NAME,
   SECTION_USER_EVENTS,
   DURATION_USER_EVENT,
+  CONFIRMATION_ADDING_EVENT,
 } from "./data/global.js";
 
 export function CREATE_SELECT_OPTIONS() {
@@ -31,8 +32,16 @@ export function GET_ALL_VALUES() {
   const EVENT_DURRATION = DURATION_USER_EVENT.value;
   var EVENT_DATE = new Date(DATE_OF_EVENT.value).toString().slice(4, 21);
 
-  const GET_EVENT_SIMILAR_ID = IMAGES_DATA.find((x) => x._id === EVENT_SPORT);
-  const EVENT_CHECK_DATE = GET_EVENT_SIMILAR_ID.check_date;
+  //// if (!EVENT_SPORT || !EVENT_NAME || !EVENT_DURRATION || !EVENT_DATE ) {
+  ////   return false;
+  //// } else {
+  //// }
+
+  if (!EVENT_SPORT) {
+  } else {
+    const GET_EVENT_SIMILAR_ID = IMAGES_DATA.find((x) => x._id === EVENT_SPORT);
+    var EVENT_CHECK_DATE = GET_EVENT_SIMILAR_ID.check_date;
+  }
 
   const EVENT_OBJECT = {
     _id: EVENT_SPORT,
@@ -42,10 +51,20 @@ export function GET_ALL_VALUES() {
     duration: EVENT_DURRATION,
   };
 
+  for (var i in EVENT_OBJECT) {
+    if (EVENT_OBJECT[i] === "") {
+      CONFIRMATION_ADDING_EVENT.innerHTML = 'Répondez à tous les champs!'
+      return false;
+    } else {
+      CONFIRMATION_ADDING_EVENT.innerHTML = '';
+    }
+  }
+
   if (localStorage.getItem(`Event: ${EVENT_SPORT}`)) {
     alert("Limite d'événements atteinte pour ce sport !");
   } else {
     localStorage.setItem(`Event: ${EVENT_SPORT}`, JSON.stringify(EVENT_OBJECT));
+    EVENT_SUBMIT();
   }
 }
 
@@ -158,8 +177,17 @@ export function CANCEL_EXPIRED_EVENTS() {
     } else {
       document.querySelector(
         `.${EVENTS_EXISTS[i].check_date}`
-      ).innerHTML = `Event Finished: ${EVENTS_EXISTS[i]._id} le ${EVENTS_EXISTS[i].date}`;
+      ).innerHTML = `Evénement de : ${EVENTS_EXISTS[i]._id} terminé le ${EVENTS_EXISTS[i].date}`;
       localStorage.removeItem(`Event: ${EVENTS_EXISTS[i]._id}`);
     }
   }
+}
+
+function EVENT_SUBMIT() {
+
+  const EVENT_CONFIRMATION = `<span> L'évènement à été créé avec succès. Veuillez le retrouver dans votre <a href="./account.html">profil</a> !
+                          Attention l'évènement expire automatiquement une fois la date dépassée ! </span> <br> <span> Retour à l' <a href="../index.html"> accueil ! </a> </span>`
+
+  CONFIRMATION_ADDING_EVENT.innerHTML = EVENT_CONFIRMATION;
+
 }
