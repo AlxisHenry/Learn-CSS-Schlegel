@@ -11,6 +11,7 @@ import {
   SHOW_USER_ID,
   EDIT_USER_ID,
   SHOW_USERS_FAVS,
+  SECTION_USER_EVENTS,
 } from "./data/global.js";
 
 export function SHOW_ID(param) {
@@ -62,6 +63,7 @@ export function LOGOUT_USER() {
     TOGGLE_CRYPTED_PASS[1].style.visibility = "hidden";
     EDIT_USER_ID.style.visibility = "hidden";
     SHOW_USERS_FAVS.style.visibility = "hidden";
+    SECTION_USER_EVENTS.style.visibility = "hidden";
   } else {
     return false;
   }

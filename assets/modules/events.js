@@ -60,6 +60,12 @@ export function GET_ALL_VALUES() {
     }
   }
 
+  if (!localStorage.getItem('name') && !localStorage.getItem('pass')) {
+    CONFIRMATION_ADDING_EVENT.innerHTML = 'Connectez-vous pour poursuivre !';
+    return false;
+  }
+
+
   if (localStorage.getItem(`Event: ${EVENT_SPORT}`)) {
     alert("Limite d'événements atteinte pour ce sport !");
   } else {
