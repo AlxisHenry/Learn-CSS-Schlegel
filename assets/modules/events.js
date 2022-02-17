@@ -21,7 +21,12 @@ export function CREATE_SELECT_OPTIONS() {
 }
 
 export function UPDATE_DATE() {
-  const GET_HOURS = new Date().toString().slice(16, 21);
+  var GET_HOURS = new Date().toString().slice(16, 21);
+  const RECTIFY_HOURS = parseFloat(GET_HOURS.slice(0, 2)) + 1;
+  const RECTIFY_MINUTES = GET_HOURS.slice(3, 5);
+
+  var GET_HOURS = `${RECTIFY_HOURS}:${RECTIFY_MINUTES}`;
+
   DATE_OF_EVENT.value = `${DATE_FORMAT}T${GET_HOURS}`;
   DATE_OF_EVENT.min = `${DATE_FORMAT}T${GET_HOURS}`;
 }
@@ -53,18 +58,17 @@ export function GET_ALL_VALUES() {
 
   for (var i in EVENT_OBJECT) {
     if (EVENT_OBJECT[i] === "") {
-      CONFIRMATION_ADDING_EVENT.innerHTML = 'Répondez à tous les champs!'
+      CONFIRMATION_ADDING_EVENT.innerHTML = "Répondez à tous les champs!";
       return false;
     } else {
-      CONFIRMATION_ADDING_EVENT.innerHTML = '';
+      CONFIRMATION_ADDING_EVENT.innerHTML = "";
     }
   }
 
-  if (!localStorage.getItem('name') && !localStorage.getItem('pass')) {
-    CONFIRMATION_ADDING_EVENT.innerHTML = 'Connectez-vous pour poursuivre !';
+  if (!localStorage.getItem("name") && !localStorage.getItem("pass")) {
+    CONFIRMATION_ADDING_EVENT.innerHTML = "Connectez-vous pour poursuivre !";
     return false;
   }
-
 
   if (localStorage.getItem(`Event: ${EVENT_SPORT}`)) {
     alert("Limite d'événements atteinte pour ce sport !");
@@ -190,10 +194,8 @@ export function CANCEL_EXPIRED_EVENTS() {
 }
 
 function EVENT_SUBMIT() {
-
   const EVENT_CONFIRMATION = `<span> L'évènement à été créé avec succès. Veuillez le retrouver dans votre <a href="./account.html">profil</a> !
-                          Attention l'évènement expire automatiquement une fois la date dépassée ! </span> <br> <span> Retour à l' <a href="../index.html"> accueil ! </a> </span>`
+                          Attention l'évènement expire automatiquement une fois la date dépassée ! </span> <br> <span> Retour à l' <a href="../index.html"> accueil ! </a> </span>`;
 
   CONFIRMATION_ADDING_EVENT.innerHTML = EVENT_CONFIRMATION;
-
 }
