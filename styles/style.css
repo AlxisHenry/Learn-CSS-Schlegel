@@ -164,7 +164,8 @@ td{
 .active {
   background: #ed464d;
   color: #f1f1f1;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  text-decoration: underline;
 }
 
 .onglets:last-child {
@@ -181,4 +182,23 @@ td{
 .active-contenu {
   display: block;
   transition: all 0.3s ease;
+}
+#favoris, #events, #account {
+  position: relative;
+  text-decoration: none;
+}
+ 
+#favoris:after, #events:after, #account:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ed464d;
+  transition: width 300ms ease-in-out;
+}
+ 
+#favoris:hover:after , #events:hover:after, #account:hover:after {
+  width: 100%;
 }

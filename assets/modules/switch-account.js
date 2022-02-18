@@ -25,7 +25,7 @@ export function ONGLETS_ANIMATIONS(e) {
   CHANGE_SECTION[index].classList.add("active-contenu");
 }
 
-export async function CHANGE_ON_LOAD() {
+export function CHANGE_ON_LOAD() {
   const LAST_ACTIVITY = localStorage.getItem("last_account_activity");
 
   if (!LAST_ACTIVITY) {
