@@ -72,7 +72,7 @@ export function LOGOUT_USER() {
 }
 
 function REDIRECT_TO_HOMEPAGE() {
-  window.location.replace("../../Learn-CSS-Schlegel/index.html");
+  window.location.href = '../index.html';
 } 
 
 export function TOGGLE_VIEW_PW() {
