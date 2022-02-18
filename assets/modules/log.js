@@ -57,16 +57,22 @@ export function ADD_TO_LOCALSTORAGE() {
 export function LOGOUT_USER() {
   if (confirm("Cela va supprimer toutes vos données !")) {
     localStorage.clear();
-    CRYPTED_PASS.innerHTML = "Vous avez été déconnecté !";
+    CRYPTED_PASS.innerHTML = `Vous avez été déconnecté !<br>
+                              Vous allez être rediriger vers la page d'accueil...`
     SHOW_USER_ID.innerHTML = "";
     TOGGLE_CRYPTED_PASS[0].style.visibility = "hidden";
     TOGGLE_CRYPTED_PASS[1].style.visibility = "hidden";
     EDIT_USER_ID.style.visibility = "hidden";
     SHOW_USERS_FAVS.style.visibility = "hidden";
     SECTION_USER_EVENTS.style.visibility = "hidden";
+    setTimeout(REDIRECT_TO_HOMEPAGE, 2000);
   } else {
     return false;
   }
+}
+
+function REDIRECT_TO_HOMEPAGE() {
+  window.location.replace("../../index.html");
 }
 
 export function TOGGLE_VIEW_PW() {
@@ -91,6 +97,7 @@ export function TOGGLE_VIEW_PW() {
 export function TOGGLE_VIEW_ID() {
   if (!LOCAL_GET_ID) {
     SHOW_USER_ID.innerHTML = "Une erreur est survenue";
+    window.location.replace("../../index.html ");
   } else {
     SHOW_USER_ID.innerHTML = LOCAL_GET_ID;
   }
