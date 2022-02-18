@@ -72,7 +72,7 @@ export function LOGOUT_USER() {
 }
 
 function REDIRECT_TO_HOMEPAGE() {
-  window.location.href = './../index.html';
+    window.location.href = './../index.html';
 } 
 
 export function TOGGLE_VIEW_PW() {
@@ -97,7 +97,7 @@ export function TOGGLE_VIEW_PW() {
 export function TOGGLE_VIEW_ID() {
   if (!LOCAL_GET_ID) {
     SHOW_USER_ID.innerHTML = "Une erreur est survenue";
-    window.location.replace("../../index.html ");
+    window.location.replace("./../index.html ");
   } else {
     SHOW_USER_ID.innerHTML = LOCAL_GET_ID;
   }
