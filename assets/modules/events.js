@@ -25,7 +25,11 @@ export function UPDATE_DATE() {
   const RECTIFY_HOURS = parseFloat(GET_HOURS.slice(0, 2)) + 1;
   const RECTIFY_MINUTES = GET_HOURS.slice(3, 5);
 
-  var GET_HOURS = `${RECTIFY_HOURS}:${RECTIFY_MINUTES}`;
+  if (RECTIFY_HOURS < 10) {
+    var GET_HOURS = `0${RECTIFY_HOURS}:${RECTIFY_MINUTES}`;
+  } else {
+    var GET_HOURS = `${RECTIFY_HOURS}:${RECTIFY_MINUTES}`;
+  }
 
   DATE_OF_EVENT.value = `${DATE_FORMAT}T${GET_HOURS}`;
   DATE_OF_EVENT.min = `${DATE_FORMAT}T${GET_HOURS}`;
@@ -117,25 +121,27 @@ export async function SHOW_USER_EVENTS() {
     var GET_EVENT_SIMILAR_ID = IMAGES_DATA.find((x) => x._id === GET_EVENT_ID);
 
     if (GET_EVENT_SIMILAR_ID.this_element) {
-      const EVENT_INPROGRESS = `<div class="contain-event ${GET_EVENT_SIMILAR_ID.this_element}"> 
-      <p class="title">${GET_EVENT_SIMILAR_ID.h1}</p>
-      <img style="width: 120px;" title="${GET_EVENT_SIMILAR_ID.title}" about="${GET_EVENT_SIMILAR_ID.this_element}" class="img${GET_EVENT_SIMILAR_ID.this_element}" alt="${GET_EVENT_SIMILAR_ID.alt}" src="${GET_EVENT_SIMILAR_ID.favlink}"><br>
-      <span class="this-contain-date">${EVENTS_EXISTS[i].date}</span><br>
-      <span class="this-contain-name">${EVENTS_EXISTS[i].name}</span><br>
-      <span class="this-contain-duration">${EVENTS_EXISTS[i].duration}</span>
-      <input removethis="${EVENTS_EXISTS[i]._id}" class="cancel-this-event ${GET_EVENT_SIMILAR_ID.this_element}" type="submit" value="X"></input>`;
+      const EVENT_INPROGRESS = `<tr>
+    <td> <p class="title">${GET_EVENT_SIMILAR_ID.h1}</p> </td>
+    <td> <img style="width: 50px;" title="${GET_EVENT_SIMILAR_ID.title}" about="${GET_EVENT_SIMILAR_ID.this_element}" class="img${GET_EVENT_SIMILAR_ID.this_element}" alt="${GET_EVENT_SIMILAR_ID.alt}" src="${GET_EVENT_SIMILAR_ID.favlink}"></td>
+    <td> <span class="this-contain-date">${EVENTS_EXISTS[i].date}</span></td>
+    <td> <span class="this-contain-name">${EVENTS_EXISTS[i].name}</span></td>
+    <td> <span class="this-contain-duration">${EVENTS_EXISTS[i].duration}</span></td>
+    <td class="delete-this-event">  <input removethis="${EVENTS_EXISTS[i]._id}" class="cancel-this-event ${GET_EVENT_SIMILAR_ID.this_element}" type="submit" value="X"></input></td>
+    </tr>`;
 
-      SECTION_USER_EVENTS.insertAdjacentHTML("afterbegin", EVENT_INPROGRESS);
+      SECTION_USER_EVENTS.insertAdjacentHTML("beforeend", EVENT_INPROGRESS);
     } else {
-      const EVENT_INPROGRESS = `<div class="contain-event ${EVENTS_EXISTS[i]._id}"> 
-            <p class="title">${GET_EVENT_SIMILAR_ID.h1}</p>
-            <img style="width: 120px;" title="${GET_EVENT_SIMILAR_ID.title}" about="${EVENTS_EXISTS[i]._id}" class="img${EVENTS_EXISTS[i]._id}" alt="${GET_EVENT_SIMILAR_ID.alt}" src="${GET_EVENT_SIMILAR_ID.favlink}"><br>
-            <span class="this-contain-date">${EVENTS_EXISTS[i].date}</span><br>
-            <span class="this-contain-name">${EVENTS_EXISTS[i].name}</span><br>
-            <span class="this-contain-duration">${EVENTS_EXISTS[i].duration}</span>
-            <input removethis="${EVENTS_EXISTS[i]._id}" class="cancel-this-event ${EVENTS_EXISTS[i]._id}" type="submit" value="X"></input>`;
+      const EVENT_INPROGRESS = `<tr>
+    <td> <p class="title">${GET_EVENT_SIMILAR_ID.h1}</p></td>
+    <td> <img style="width: 50px;" title="${GET_EVENT_SIMILAR_ID.title}" about="${EVENTS_EXISTS[i]._id}" class="img${EVENTS_EXISTS[i]._id}" alt="${GET_EVENT_SIMILAR_ID.alt}" src="${GET_EVENT_SIMILAR_ID.favlink}"><br></td>
+    <td> <span class="this-contain-date">${EVENTS_EXISTS[i].date}</span></td>
+    <td> <span class="this-contain-name">${EVENTS_EXISTS[i].name}</span></td>
+    <td> <span class="this-contain-duration">${EVENTS_EXISTS[i].duration}</span></td>
+    <td class="delete-this-event"> <input removethis="${EVENTS_EXISTS[i]._id}" class="cancel-this-event ${EVENTS_EXISTS[i]._id}" type="submit" value="X"></input></td>
+    </tr>`;
 
-      SECTION_USER_EVENTS.insertAdjacentHTML("afterbegin", EVENT_INPROGRESS);
+      SECTION_USER_EVENTS.insertAdjacentHTML("beforeend", EVENT_INPROGRESS);
     }
 
     var CANCEL_EVENT_BUTTON = document.querySelectorAll(".cancel-this-event");
