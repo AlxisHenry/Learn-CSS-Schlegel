@@ -114,9 +114,27 @@
   .favorites-icons {
     margin-left: 80%;
   }
-  
+
   .events-icons {
     margin-left: -80%;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .show-img-title {
+
+    position: absolute;
+    margin-top: 420px;
+  }
+
+  .favorites-icons, .events-icons {
+    margin-top: 15px
+  }
+  .favorites-icons {
+    margin-left: 60%;
+  }
+  .events-icons {
+    margin-left: -60%;
   }
 }
 
