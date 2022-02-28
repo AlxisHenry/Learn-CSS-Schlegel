@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport Addict - New Template</title>
+    <script
+      src="https://kit.fontawesome.com/2d2078daec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/ico/sport-addict.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    
+    <header class="header contain-navbar contain-account-setting">
+      <div class="nav-responsive menu-side-nav">
+        <div class="menu-burger-show">
+          <div class="menu-burger mb-top"></div>
+          <div class="menu-burger mb-middle"></div>
+          <div class="menu-burger mb-bottom"></div>
+        </div>
+      </div>
+
+      <div class="contain-redirection">
+        <span class="menu-redirection menu-get-const">
+          <a href="./html/sports.html?class=activity" class="activity"
+            >Besoin d'idées ?</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./html/sports.html?class=events" class="events"
+            >Les Evenements !</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./html/sports.html?class=populaires" class="populaires"
+            >Les Populaires !</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const active-on-page">
+          <a href="./index.html?class=homepage"  class="homepage"
+            >Accueil</a
+          >
+        </span>
+      </div>
+
+      <div class="contain-account-informations">
+        <span class="user-login">
+        </span>
+        <!-- TODO Si connecté, href vers account, sinon # -->
+        <a class="register-button show-account-name" href="#"><i class="fa-regular fa-user"></i></a>
+        <a class="register-button show-account-name" href="./html/register.html"><span class="user-id">M'inscrire</span></a>
+
+        <!-- TODO Plus de 3500 sportifs nous ont déjà rejoints  -->
+        <!--! Afficher le nombres de favoris, évènements créés -->
+      </div>
+    </header>
+
+    <div class="menu-burger-content">
+
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./html/sports.html?class=activity" class="activity"
+          >Besoin d'idées ?</a
+        >
+      </span>
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./html/sports.html?class=events" class="events"
+          >Les Evenements !</a
+        >
+      </span>
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./html/sports.html?class=populaires" class="populaires"
+          >Les Populaires !</a
+        >
+      </span>
+      <span class="menu-burger-redirection menu-get-const active-on-page">
+        <a href="#?class=homepage" class="homepage"
+          >Accueil</a
+        >
+      </span>
+    </div>
+
+    <main class="main main-content">
+      <div class="logo">
+        <img
+          class="loading-logo"
+          src="./assets/img/sport-addict.png"
+          alt="Logo de Sport Addict"
+        />
+      </div>
+
+      <div class="center">
+        <span class="research-comment">Dites nous ce qui vous inspire.</span>
+      </div>
+
+      <div class="search-bar center">
+        <input
+          class="input-search"
+          type="search"
+          name="searchbar"
+          id="searchbar"
+          placeholder="Search..."
+        />
+        <i class="fas fa-search"></i>
+      </div>
+    </main>
+
+    <section class="section research-confirmation-message">
+      <!-- TODO Check value of searchbar -->      
+      <!-- TODO JS > Vérifier la width de la searchbar -->
+      <div class="contain-validation-message hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check"> Sport trouvé ! Vous allez être redirigé.</span>
+      </div>  
+      <div class="contain-error-message hidden">
+        <i class="fa-solid fa-xmark"></i> <span class="message-errorm"> Navré, nous n'avons pas trouvé ce sport.</span>
+      </div>
+    </section>
+
+    <section class="section loading-section hidden">
+      <div
+        class="loading-section-children section-contain-logo display-transition"
+      >
+        <img
+          class="loading-logo"
+          src="./assets/img/sport-addict.png"
+          alt="Logo de Sport Addict"
+        />
+      </div>
+      <div class="loading-section-children section-contain-show-more-btn">
+        <button class="show-more-btn btn">Show more !</button>
+      </div>
+    </section>
+
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

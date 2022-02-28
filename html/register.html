@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription - Sport Addict</title>
+    <script
+      src="https://kit.fontawesome.com/2d2078daec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./../styles/style.css" />
+    <link rel="stylesheet" href="./../styles/index.css" />
+    <link
+      rel="shortcut icon"
+      href="./../assets/ico/sport-addict.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="header contain-navbar contain-account-setting">
+      <div class="nav-responsive menu-side-nav">
+        <div class="menu-burger-show">
+          <div class="menu-burger mb-top"></div>
+          <div class="menu-burger mb-middle"></div>
+          <div class="menu-burger mb-bottom"></div>
+        </div>
+      </div>
+
+      <div class="contain-redirection">
+        <span class="menu-redirection menu-get-const">
+          <a href="./sports.html?class=activity" class="activity"
+            >Besoin d'idées ?</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./sports.html?class=events" class="events"
+            >Les Evenements !</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./sports.html?class=populaires" class="populaires"
+            >Les Populaires !</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./../index.html?class=homepage" class="homepage">Accueil</a>
+        </span>
+      </div>
+
+      <div class="contain-account-informations">
+        <span class="user-login"> </span>
+        <!-- TODO Si connecté, href vers account, sinon # -->
+        <a class="register-button show-account-name" href="#"
+          ><i class="fa-regular fa-user"></i
+        ></a>
+        <a class="register-button show-account-name" href="#"
+          ><span class="active-on-page user-id">M'inscrire</span></a
+        >
+
+        <!-- TODO Plus de 3500 sportifs nous ont déjà rejoints  -->
+        <!--! Afficher le nombres de favoris, évènements créés -->
+      </div>
+    </header>
+
+    <div class="menu-burger-content">
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./sports.html?class=activity" class="activity"
+          >Besoin d'idées ?</a
+        >
+      </span>
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./sports.html?class=events" class="events">Les Evenements !</a>
+      </span>
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./sports.html?class=populaires" class="populaires"
+          >Les Populaires !</a
+        >
+      </span>
+      <span class="menu-burger-redirection menu-get-const active-on-page">
+        <a href="./../index.html?class=homepage" class="homepage">Accueil</a>
+      </span>
+    </div>
+
+<!-- TODO : Si l'utilisateur arrive sur cette page en étant connecté, alors le renvoyer sur la page d'accueil ou sur une page d'erreur -->
+
+    <section class="section contain-register-form">
+
+        <h1> Inscription </h1>
+        
+        <div class="contain-form">
+            <label for="uname"><b>Votre nom</b></label>
+            <input type="text" placeholder="Enter Username" name="name" id="getname" required>
+      
+            <label for="psw"><b>Mots de passe</b></label>
+            <input type="password" placeholder="Enter Password" id="getpswd" name="pass">
+            
+            
+
+            <a class="href-return-index" href=""><button id="submit" type="submit">Login</button></a>
+
+<!-- 
+TODO : Informer l'utilisateur des règles d'inscriptions
+
+    ! Password : Au moins 5 caractères
+    ! Username : Différent du mots de passe & 5 caractères
+    ! mail : mail valable xxx@xxx.xxx
+-->
+
+        </div>
+        
+
+    </section>
+
+
+    <section class="section register-confirmation-message">
+
+        <div class="contain-validation-message hidden">
+            <i class="fa-solid fa-check"></i> <span class="message-check"> Inscription réussi. Vous allez être redirigé.</span>
+          </div>  
+          <div class="contain-error-message hidden">
+            <i class="fa-solid fa-xmark"></i> <span class="message-error"> Oups. Une erreur s'est produite.</span>
+          </div>   
+
+    </section>
+
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

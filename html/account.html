@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="container-onglets">
+            <div  id="account" class="onglets">Mon compte</div>
+            <div id="favoris" class="onglets">Mes favoris</div>
+            <div id="events-account" class="onglets">Evenements</div>
+        </div>
+    
+
+      <section class="account active-contenu">
+        <div class="cancel-connection">
+          <a class="cancel-user-connection" href="#">
+            <img
+              src="../assets/svg/xmark-solid.svg"
+              style="width: 20px"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- Possibilité de faire apparâitre son mot de passe -->
+
+        <span class="show-user-pass show-crypt-pass"></span>
+        <!-- <img
+          class="toggle-uncrypt-pass"
+          style="width: 20px"
+          src="../assets/svg/eye-slash-solid (1).svg"
+        />
+        <img
+          class="toggle-uncrypt-pass"
+          style="width: 20px"
+          src="../assets/svg/eye-solid.svg"
+        />
+        <span class="show-account-user-id"></span>
+        <img
+          class="edit-account-user-id"
+          style="width: 20px"
+          src="../assets/svg/pen-to-square-solid.svg"
+        /> -->
+        <br /><br />
+      </section>
+
+      <section class="favoris">
+        <div
+          class="show-users-fav"
+        ></div>
+      </section>
+
+      <section class="events">
+        <!-- <table class="show-all-created-events">
+          <tr>
+            <td>Sport</td>
+            <td>Image</td>
+            <td>Date de l'évènement</td>
+            <td>Commentaire</td>
+            <td>Durée estimée</td>
+            <td class="delete-this-event"></td>
+          </tr>
+        </table> -->
+      </section>
+    </div>
+
+    <script type="module" src="../js/account.js"></script>
+
+    <a href="../index.html">Return Home</a>
+  </body>
+</html>
