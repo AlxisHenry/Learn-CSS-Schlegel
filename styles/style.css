@@ -9,18 +9,6 @@
 
 body {
   background-color: white;
-  /* background-image: linear-gradient(
-      transparent 23px,
-      rgba(220, 220, 200, 0.8) 24px,
-      transparent 24px
-    ),
-    linear-gradient(
-      90deg,
-      transparent 23px,
-      rgba(220, 220, 200, 0.8) 24px,
-      transparent 24px
-    );
-  background-size: 100% 24px, 24px 100%; */
 }
 
 /** -------------  HEADER -------------- */
@@ -77,37 +65,7 @@ body {
 /*! -------------  HEADER -------------- */
 /** --------------  MAIN -------------- */
 
-/* main {
-  height: 100%;
-  width: 100%;
-}
-
-.this_contain_logo {
-  width: 100%; 
-  height: auto;
-  padding: 12px;
-}
-
-.research-sport {
-  width: 12vw;
-  height: 20px;
-  border-radius: 10px;
-}
-
 /*! --------------  MAIN -------------- */
-
-/* .this_section_contain_image-grid > img {
-  width: 300px;
-  height: 300px;
-} */
-/* 
-.section {
-  width: auto;
-  height: 500px;
-  margin-bottom: 4em;
-
-  background-color: blue;
-} */
 
  .show-search-img {
   max-width: 100%;
@@ -171,7 +129,7 @@ td{
 .onglets:last-child {
   width: 34%;
 }
-.favoris, .events, .account {
+.favoris, .events-account, .account {
     height: 75%;
     width: 100%;
     display: none;
@@ -183,12 +141,11 @@ td{
   display: block;
   transition: all 0.3s ease;
 }
-#favoris, #events, #account {
+#favoris, #events-account, #account {
   position: relative;
-  text-decoration: none;
 }
  
-#favoris:after, #events:after, #account:after {
+#favoris:after, #events-account:after, #account:after {
   content: '';
   position: absolute;
   left: 0;
@@ -199,6 +156,32 @@ td{
   transition: width 300ms ease-in-out;
 }
  
-#favoris:hover:after , #events:hover:after, #account:hover:after {
+#favoris:hover:after , #events-account:hover:after, #account:hover:after {
   width: 100%;
 }
+/*DEBUT footer*/
+footer{
+  background-color: #65768C;
+  padding:25px;
+  margin-top: 100px;
+  color: #ffffff;
+}
+footer ul li{
+  list-style: none;
+  line-height: 50px;
+  margin: 0;
+}
+footer ul li a{
+  text-decoration: none;
+  color: #ffffff;
+
+}
+#pied{
+  justify-content: space-evenly;
+}
+#pied h2{
+  font-size: 30px;
+  color: #A63F3F;
+  text-align: center;
+}
+/*FIN footer*/

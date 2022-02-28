@@ -99,7 +99,7 @@ export function TOGGLE_VIEW_ID() {
     SHOW_USER_ID.innerHTML = "Une erreur est survenue";
     window.location.replace("./../index.html ");
   } else {
-    SHOW_USER_ID.innerHTML = LOCAL_GET_ID;
+    SHOW_USER_ID.innerHTML = `<input disabled="disabled" style="text-align:center;" value="${LOCAL_GET_ID}"/></input>`;
   }
 }
 
