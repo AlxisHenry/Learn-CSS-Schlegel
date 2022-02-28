@@ -1,17 +1,18 @@
 export const GET_URL_CLASS  = new URLSearchParams(window.location.search).get("class"); // GET class: 'event','activity','populaire' 
 const GET_CONST = document.querySelectorAll('.menu-get-const');
+const VERIFY_EXISTIGN_CLASS = document.querySelector('.contain-categories-images');
 const INDEX_PAGE = document.querySelector('title').innerHTML === "Sport Addict - New Template";
 
 for (let i = 0; i < GET_CONST.length; i++) {
     
-   if (!GET_URL_CLASS & !(INDEX_PAGE) ) {
-       location.replace('../index.html');
-       break;
-   }
-   
-   if (!GET_URL_CLASS & INDEX_PAGE) {
-       break;
-   }
+    if (!GET_URL_CLASS && VERIFY_EXISTIGN_CLASS) {
+        location.replace('../index.html');
+        break;
+    }
+    
+    if (!GET_URL_CLASS & INDEX_PAGE) {
+        break;
+    }
 
    if ( GET_CONST[i].children[0].classList.contains(GET_URL_CLASS)) {
        GET_CONST[i].classList.add('active-on-page');

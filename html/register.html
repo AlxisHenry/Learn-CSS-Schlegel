@@ -17,7 +17,7 @@
       type="image/x-icon"
     />
   </head>
-  <body>
+  <body class="register-page">
     <header class="header contain-navbar contain-account-setting">
       <div class="nav-responsive menu-side-nav">
         <div class="menu-burger-show">
@@ -57,8 +57,6 @@
         <a class="register-button show-account-name" href="#"
           ><span class="active-on-page user-id">M'inscrire</span></a
         >
-
-        <!-- TODO Plus de 3500 sportifs nous ont déjà rejoints  -->
         <!--! Afficher le nombres de favoris, évènements créés -->
       </div>
     </header>
@@ -81,46 +79,60 @@
         <a href="./../index.html?class=homepage" class="homepage">Accueil</a>
       </span>
     </div>
-
+    <div class="form-structor">
+      <div class="signup">
+        <h2 class="form-title" id="signup">Plus de 3500 sportifs nous <br> ont déjà rejoints. </h2>
+        <div class="form-holder">
+          <input type="text" class="input" placeholder="Name" id="getname" required/>
+          <input type="email" class="input" placeholder="Email" id="getmail" required/>
+          <input type="password" class="input" placeholder="Password" id="getpswd" required/>
+        </div>
+        <a class="href-return-index" href=""><button id="submit" class="submit-btn">S'inscrire</button></a>
+      </div>
+    </div>
 <!-- TODO : Si l'utilisateur arrive sur cette page en étant connecté, alors le renvoyer sur la page d'accueil ou sur une page d'erreur -->
 
-    <section class="section contain-register-form">
+    <section class="section contain-register-form hidden">
 
-        <h1> Inscription </h1>
         
         <div class="contain-form">
-            <label for="uname"><b>Votre nom</b></label>
+          <h2 class="register-title"> Formulaire d'inscription </h1>
+
+          <div class="form">
+            <label for="uname"><b>Saisissez votre nom</b></label>
             <input type="text" placeholder="Enter Username" name="name" id="getname" required>
-      
-            <label for="psw"><b>Mots de passe</b></label>
+          </div>
+          <div class="form">
+            <label for="psw"><b>Saisissez votre mot de passe</b></label>
             <input type="password" placeholder="Enter Password" id="getpswd" name="pass">
-            
-            
-
+          </div>
+          <div class="form">
+            <label for="psw"><b>Saisissez votre adresse mail</b></label>
+            <input type="password" placeholder="Enter Password" id="getpswd" name="pass">
+          </div>
             <a class="href-return-index" href=""><button id="submit" type="submit">Login</button></a>
-
-<!-- 
-TODO : Informer l'utilisateur des règles d'inscriptions
-
-    ! Password : Au moins 5 caractères
-    ! Username : Différent du mots de passe & 5 caractères
-    ! mail : mail valable xxx@xxx.xxx
--->
-
         </div>
         
+        <div class="contain-rules hidden">
+
+        <!-- TODO : Informer l'utilisateur des règles d'inscription -->
+        
+          * Nom composé de 2 caractères min. <br>
+          * Mot de passe composé de 5 caractères min. <br>
+          * Adresse mail valide
+
+        </div>
 
     </section>
-
 
     <section class="section register-confirmation-message">
 
         <div class="contain-validation-message hidden">
-            <i class="fa-solid fa-check"></i> <span class="message-check"> Inscription réussi. Vous allez être redirigé.</span>
-          </div>  
-          <div class="contain-error-message hidden">
-            <i class="fa-solid fa-xmark"></i> <span class="message-error"> Oups. Une erreur s'est produite.</span>
-          </div>   
+          <i class="fa-solid fa-check"></i> <span class="message-check"> Inscription réussi. Vous allez être redirigé.</span>
+        </div>  
+        <div class="contain-error-message hidden">
+          <i class="fa-solid fa-xmark"></i> <span class="message-error"> Oupss. Une erreur s'est produite.</span>
+        </div>   
 
     </section>
 
