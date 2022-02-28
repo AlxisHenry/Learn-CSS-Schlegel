@@ -1,5 +1,4 @@
 @media screen and (max-width: 1000px) {
-
   .form-structor {
     margin-top: 80px;
   }
@@ -105,6 +104,19 @@
     100% {
       opacity: 1;
     }
+  }
+
+  .show-img {
+    margin-top: 13px;
+    width: 360px;
+  }
+
+  .favorites-icons {
+    margin-left: 80%;
+  }
+  
+  .events-icons {
+    margin-left: -80%;
   }
 }
 
