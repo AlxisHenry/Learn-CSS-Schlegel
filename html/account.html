@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mon compte - Sport Addict</title>
     <script
-    src="https://kit.fontawesome.com/2d2078daec.js"
-    crossorigin="anonymous"
-  ></script>
+      src="https://kit.fontawesome.com/2d2078daec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="./../assets/ico/sport-addict.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/index.css" />
   </head>
-  <body>
+  <body class="account-page">
     <header class="header contain-navbar contain-account-setting">
       <div class="nav-responsive menu-side-nav">
         <div class="menu-burger-show">
@@ -49,7 +54,9 @@
         <a class="register-button show-account-name" href="#"
           ><i class="active-on-page fa-regular fa-user"></i
         ></a>
-        <a class="register-button show-account-name" href="./register.html
+        <a
+          class="register-button show-account-name"
+          href="./register.html
         "
           ><span class="user-id">M'inscrire</span></a
         >
@@ -75,10 +82,44 @@
       </span>
     </div>
 
-<!-- TODO: Afficher le nombres de favoris, évènements créés -->
-<!-- TODO: Show all events, all favorites -->
-<!-- TODO: Show account informations  -->
+    <!-- TODO: Afficher le nombres de favoris, évènements créés -->
+    <!-- TODO: Show all events, all favorites -->
+    <!-- TODO: Show account informations  -->
 
-<script src="./../main.js"></script>
+    <section class="section account-informations">
+      <div class="avatar"></div>
+      <div class="global"></div>
+      <div class="additional">
+        <div class=""></div>
+        <!--! nb favoris, events -->
+      </div>
+    </section>
+
+    <section class="section contain-features">
+      <div class="favorites"></div>
+      <div class="events"></div>
+    </section>
+
+    <div class="change-avatar hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Votre avatar a été changé.</span>
+    </div>
+    <div class="change-account-informations hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Changements effectués avec succès.</span>
+    </div>
+    <div class="remove-favorites hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Vous avez enlevé ${} des favoris</span>
+    </div>
+    <div class="remove-events hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Événement supprimé.</span>
+    </div>
+    <div class="remove-events-at-end hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Événement terminé.</span>
+    </div>
+    <div class="error hidden">
+      <i class="fa-solid fa-xmark"></i> <span class="message-error"> Oupss. Une erreur s'est produite.</span>
+    </div>
+
+    <!-- TODO: Fix bug with main.js (on return in for loop) -->
+    <script src="./../main.js"></script>
   </body>
 </html>
