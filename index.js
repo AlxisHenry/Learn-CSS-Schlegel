@@ -13,4 +13,10 @@ searchInput.addEventListener('click', () => {
     showInput.classList.add('transition-search');
 })
  
-    
+   
+export const GET_URL_CLASS  = new URLSearchParams(window.location.search).get("class"); // GET class: 'event','activity','populaire' 
+
+if (GET_URL_CLASS) {
+    sectionToHide.style.display = "none";
+}
+//* Permet de savoir si l'utilisateur vient d'arriver sur le site ou non

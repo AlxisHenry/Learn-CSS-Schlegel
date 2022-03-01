@@ -79,6 +79,7 @@
         <a href="./../index.html?class=homepage" class="homepage">Accueil</a>
       </span>
     </div>
+   
     <div class="form-structor">
       <div class="signup">
         <h2 class="form-title" id="signup">Plus de 3500 sportifs nous <br> ont déjà rejoints. </h2>
@@ -91,44 +92,11 @@
       </div>
     </div>
 <!-- TODO : Si l'utilisateur arrive sur cette page en étant connecté, alors le renvoyer sur la page d'accueil ou sur une page d'erreur -->
-
-    <section class="section contain-register-form hidden">
-
-        
-        <div class="contain-form">
-          <h2 class="register-title"> Formulaire d'inscription </h1>
-
-          <div class="form">
-            <label for="uname"><b>Saisissez votre nom</b></label>
-            <input type="text" placeholder="Enter Username" name="name" id="getname" required>
-          </div>
-          <div class="form">
-            <label for="psw"><b>Saisissez votre mot de passe</b></label>
-            <input type="password" placeholder="Enter Password" id="getpswd" name="pass">
-          </div>
-          <div class="form">
-            <label for="psw"><b>Saisissez votre adresse mail</b></label>
-            <input type="password" placeholder="Enter Password" id="getpswd" name="pass">
-          </div>
-            <a class="href-return-index" href=""><button id="submit" type="submit">Login</button></a>
-        </div>
-        
-        <div class="contain-rules hidden">
-
-        <!-- TODO : Informer l'utilisateur des règles d'inscription -->
-        
-          * Nom composé de 2 caractères min. <br>
-          * Mot de passe composé de 5 caractères min. <br>
-          * Adresse mail valide
-
-        </div>
-
-    </section>
-
+<!-- TODO : Ajout d'un changement de bgcolor du btn quand les informations sont bonnes -->
     <section class="section register-confirmation-message">
 
-        <div class="contain-validation-message hidden">
-          <i class="fa-solid fa-check"></i> <span class="message-check"> Inscription réussi. Vous allez être redirigé.</span>
+        <div class="contain-validation-message">
+          <i class="fa-solid fa-check"></i> <span class="message-check">Inscription réussi. Vous allez être redirigé.</span>
         </div>  
         <div class="contain-error-message hidden">
           <i class="fa-solid fa-xmark"></i> <span class="message-error"> Oupss. Une erreur s'est produite.</span>

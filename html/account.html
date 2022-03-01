@@ -4,72 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mon compte - Sport Addict</title>
+    <script
+    src="https://kit.fontawesome.com/2d2078daec.js"
+    crossorigin="anonymous"
+  ></script>
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index.css">
   </head>
   <body>
-    <div class="container">
-        <div class="container-onglets">
-            <div  id="account" class="onglets">Mon compte</div>
-            <div id="favoris" class="onglets">Mes favoris</div>
-            <div id="events-account" class="onglets">Evenements</div>
+    <header class="header contain-navbar contain-account-setting">
+      <div class="nav-responsive menu-side-nav">
+        <div class="menu-burger-show">
+          <div class="menu-burger mb-top"></div>
+          <div class="menu-burger mb-middle"></div>
+          <div class="menu-burger mb-bottom"></div>
         </div>
-    
+      </div>
 
-      <section class="account active-contenu">
-        <div class="cancel-connection">
-          <a class="cancel-user-connection" href="#">
-            <img
-              src="../assets/svg/xmark-solid.svg"
-              style="width: 20px"
-              alt=""
-            />
-          </a>
-        </div>
-        <!-- Possibilité de faire apparâitre son mot de passe -->
+      <div class="contain-redirection">
+        <span class="menu-redirection menu-get-const">
+          <a href="./sports.html?class=activity" class="activity"
+            >Besoin d'idées ?</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./sports.html?class=events" class="events"
+            >Les Evenements !</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./sports.html?class=populaires" class="populaires"
+            >Les Populaires !</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./../index.html?class=homepage" class="homepage">Accueil</a>
+        </span>
+      </div>
 
-        <span class="show-user-pass show-crypt-pass"></span>
-        <!-- <img
-          class="toggle-uncrypt-pass"
-          style="width: 20px"
-          src="../assets/svg/eye-slash-solid (1).svg"
-        />
-        <img
-          class="toggle-uncrypt-pass"
-          style="width: 20px"
-          src="../assets/svg/eye-solid.svg"
-        />
-        <span class="show-account-user-id"></span>
-        <img
-          class="edit-account-user-id"
-          style="width: 20px"
-          src="../assets/svg/pen-to-square-solid.svg"
-        /> -->
-        <br /><br />
-      </section>
+      <div class="contain-account-informations">
+        <span class="user-login"> </span>
+        <!-- TODO Si connecté, href vers account, sinon # -->
+        <a class="register-button show-account-name" href="#"
+          ><i class="active-on-page fa-regular fa-user"></i
+        ></a>
+        <a class="register-button show-account-name" href="./register.html
+        "
+          ><span class="user-id">M'inscrire</span></a
+        >
+      </div>
+    </header>
 
-      <section class="favoris">
-        <div
-          class="show-users-fav"
-        ></div>
-      </section>
-
-      <section class="events">
-        <!-- <table class="show-all-created-events">
-          <tr>
-            <td>Sport</td>
-            <td>Image</td>
-            <td>Date de l'évènement</td>
-            <td>Commentaire</td>
-            <td>Durée estimée</td>
-            <td class="delete-this-event"></td>
-          </tr>
-        </table> -->
-      </section>
+    <div class="menu-burger-content">
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./sports.html?class=activity" class="activity"
+          >Besoin d'idées ?</a
+        >
+      </span>
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./sports.html?class=events" class="events">Les Evenements !</a>
+      </span>
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./sports.html?class=populaires" class="populaires"
+          >Les Populaires !</a
+        >
+      </span>
+      <span class="menu-burger-redirection menu-get-const active-on-page">
+        <a href="./../index.html?class=homepage" class="homepage">Accueil</a>
+      </span>
     </div>
 
-    <script type="module" src="../js/account.js"></script>
+<!-- TODO: Afficher le nombres de favoris, évènements créés -->
+<!-- TODO: Show all events, all favorites -->
+<!-- TODO: Show account informations  -->
 
-    <a href="../index.html">Return Home</a>
+<script src="./../main.js"></script>
   </body>
 </html>
