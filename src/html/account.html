@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./../../src/css/index.css" />
+    <link rel="stylesheet" href="./../../src/css/queries.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon compte - Sport Addict</title>
+    <script src="https://kit.fontawesome.com/2d2078daec.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./../../assets/favicon.ico" type="image/x-icon"/>
+  </head>
+  <body class="account-page">
+    <header class="header contain-navbar contain-account-setting">
+      <div class="nav-responsive menu-side-nav">
+        <div class="menu-burger-show">
+          <div class="menu-burger mb-top"></div>
+          <div class="menu-burger mb-middle"></div>
+          <div class="menu-burger mb-bottom"></div>
+        </div>
+      </div>
+
+      <div class="contain-redirection">
+        <span class="menu-redirection menu-get-const">
+          <a href="./sports.html?class=activity" class="activity"
+            >Besoin d'idées ?</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./sports.html?class=events" class="events"
+            >Les Evenements !</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./sports.html?class=populaires" class="populaires"
+            >Les Populaires !</a
+          >
+        </span>
+        <span class="menu-redirection menu-get-const">
+          <a href="./../../index.html?class=homepage" class="homepage">Accueil</a>
+        </span>
+      </div>
+
+      <div class="contain-account-informations">
+        <span class="user-login"> </span>
+        <!-- TODO Si connecté, href vers account, sinon # -->
+        <a class="register-button show-account-name" href="#"
+          ><i class="active-on-page fa-regular fa-user"></i
+        ></a>
+        <a
+          class="register-button show-account-name"
+          href="./register.html"
+          ><span class="user-id">M'inscrire</span></a
+        >
+      </div>
+    </header>
+
+    <div class="menu-burger-content">
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./sports.html?class=activity" class="activity"
+          >Besoin d'idées ?</a
+        >
+      </span>
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./sports.html?class=events" class="events">Les Evenements !</a>
+      </span>
+      <span class="menu-burger-redirection menu-get-const">
+        <a href="./sports.html?class=populaires" class="populaires"
+          >Les Populaires !</a
+        >
+      </span>
+      <span class="menu-burger-redirection menu-get-const active-on-page">
+        <a href="./../../index.html?class=homepage" class="homepage">Accueil</a>
+      </span>
+    </div>
+
+    <!-- TODO: Afficher le nombres de favoris, évènements créés -->
+    <!-- TODO: Show all events, all favorites -->
+    <!-- TODO: Show account informations  -->
+
+    <div class="error-alert">
+      <i class="fa-solid fa-xmark"></i> <span class="message-error"> Oupss. Une erreur s'est produite.
+      </span>
+    </div>
+
+
+    <section class="section account-informations">
+      <div class="avatar"></div>
+      <div class="global"></div>
+      <div class="additional">
+        <div class=""></div>
+        <!--! nb favoris, events -->
+      </div>
+      <div class="change-avatar hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Votre avatar a été changé.</span>
+      </div>
+      <div class="change-account-informations hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Changements effectués avec succès.</span>
+      </div>
+    </section>
+
+    <section class="section contain-features">
+      <div class="favorites"></div>
+      <div class="events"></div>
+      <div class="remove-favorites hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Vous avez enlevé ${variable} des favoris</span>
+      </div>
+      <div class="remove-events hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Événement supprimé.</span>
+      </div>
+      <div class="remove-events-at-end hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Événement terminé.</span>
+      </div>
+    </section>
+
+
+    <!-- TODO: Fix bug with main.js (on return in for loop) -->
+    <!-- <script src="./../main.js"></script> -->
+  </body>
+</html>
