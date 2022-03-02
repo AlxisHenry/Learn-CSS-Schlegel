@@ -86,6 +86,12 @@
     <!-- TODO: Show all events, all favorites -->
     <!-- TODO: Show account informations  -->
 
+    <div class="error-alert">
+      <i class="fa-solid fa-xmark"></i> <span class="message-error"> Oupss. Une erreur s'est produite.
+      </span>
+    </div>
+
+
     <section class="section account-informations">
       <div class="avatar"></div>
       <div class="global"></div>
@@ -93,31 +99,28 @@
         <div class=""></div>
         <!--! nb favoris, events -->
       </div>
+      <div class="change-avatar hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Votre avatar a été changé.</span>
+      </div>
+      <div class="change-account-informations hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Changements effectués avec succès.</span>
+      </div>
     </section>
 
     <section class="section contain-features">
       <div class="favorites"></div>
       <div class="events"></div>
+      <div class="remove-favorites hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Vous avez enlevé ${} des favoris</span>
+      </div>
+      <div class="remove-events hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Événement supprimé.</span>
+      </div>
+      <div class="remove-events-at-end hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check">Événement terminé.</span>
+      </div>
     </section>
 
-    <div class="change-avatar hidden">
-      <i class="fa-solid fa-check"></i> <span class="message-check">Votre avatar a été changé.</span>
-    </div>
-    <div class="change-account-informations hidden">
-      <i class="fa-solid fa-check"></i> <span class="message-check">Changements effectués avec succès.</span>
-    </div>
-    <div class="remove-favorites hidden">
-      <i class="fa-solid fa-check"></i> <span class="message-check">Vous avez enlevé ${} des favoris</span>
-    </div>
-    <div class="remove-events hidden">
-      <i class="fa-solid fa-check"></i> <span class="message-check">Événement supprimé.</span>
-    </div>
-    <div class="remove-events-at-end hidden">
-      <i class="fa-solid fa-check"></i> <span class="message-check">Événement terminé.</span>
-    </div>
-    <div class="error hidden">
-      <i class="fa-solid fa-xmark"></i> <span class="message-error"> Oupss. Une erreur s'est produite.</span>
-    </div>
 
     <!-- TODO: Fix bug with main.js (on return in for loop) -->
     <script src="./../main.js"></script>
