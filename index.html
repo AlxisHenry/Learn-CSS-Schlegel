@@ -24,24 +24,16 @@
       <div class="contain-redirection">
         <!-- TODO: Enlever le href sur la page actuelle -->
         <span class="menu-redirection menu-get-const">
-          <a href="./src/html/sports.html?class=activity" class="activity"
-            >Besoin d'idées ?</a
-          >
+          <a href="./src/html/sports.html?class=activity" class="activity">Besoin d'idées ?</a>
         </span>
         <span class="menu-redirection menu-get-const">
-          <a href="./src/html/sports.html?class=events" class="events"
-            >Les Evenements !</a
-          >
+          <a href="./src/html/sports.html?class=events" class="events">Les Evenements !</a>
         </span>
         <span class="menu-redirection menu-get-const">
-          <a href="./src/html/sports.html?class=populaires" class="populaires"
-            >Les Populaires !</a
-          >
+          <a href="./src/html/sports.html?class=populaires" class="populaires">Les Populaires !</a>
         </span>
         <span class="menu-redirection menu-get-const active-on-page">
-          <a href="#?class=homepage"  class="homepage"
-            >Accueil</a
-          >
+          <a href="./index.html?class=homepage"  class="homepage">Accueil</a>
         </span>
       </div>
 
@@ -51,43 +43,28 @@
         <!-- TODO Si connecté, href vers account, sinon # -->
         <a class="register-button show-account-name" href="./src/html/account.html"><i class="fa-regular fa-user"></i></a>
         <a class="register-button show-account-name" href="./src/html/register.html"><span class="user-id">M'inscrire</span></a>
-
-        <!-- TODO Plus de 3500 sportifs nous ont déjà rejoints  -->
-        <!--! Afficher le nombres de favoris, évènements créés -->
       </div>
     </header>
 
     <div class="menu-burger-content">
 
       <span class="menu-burger-redirection menu-get-const">
-        <a href="./src/html/sports.html?class=activity" class="activity"
-          >Besoin d'idées ?</a
-        >
+        <a href="./src/html/sports.html?class=activity" class="activity">Besoin d'idées ?</a>
       </span>
       <span class="menu-burger-redirection menu-get-const">
-        <a href="./src/html/sports.html?class=events" class="events"
-          >Les Evenements !</a
-        >
+        <a href="./src/html/sports.html?class=events" class="events">Les Evenements !</a>
       </span>
       <span class="menu-burger-redirection menu-get-const">
-        <a href="./src/html/sports.html?class=populaires" class="populaires"
-          >Les Populaires !</a
-        >
+        <a href="./src/html/sports.html?class=populaires" class="populaires">Les Populaires !</a>
       </span>
       <span class="menu-burger-redirection menu-get-const active-on-page">
-        <a href="#?class=homepage" class="homepage"
-          >Accueil</a
-        >
+        <a href="./index.html?class=homepage" class="homepage">Accueil</a>
       </span>
     </div>
 
     <main class="main main-content">
       <div class="logo">
-        <img
-          class="loading-logo"
-          src="./assets/img/logo.png"
-          alt="Logo de Sport Addict"
-        />
+        <img class="loading-logo" src="./assets/img/logo.png" alt="Logo de Sport Addict"/>
       </div>
 
       <div class="center">
@@ -97,14 +74,8 @@
 <!-- TODO: Lancement d'une recherche lorsque la touche Enter est appuyée  -->
 
       <div class="search-bar center">
-        <input
-          class="input-search"
-          type="search"
-          name="searchbar"
-          id="searchbar"
-          placeholder="Search..."
-        />
-        <i class="fas fa-search"></i> 
+        <input class="input-search" type="search" name="searchbar" id="searchbar" placeholder="Search..."/>
+        <a class="search-this-sport" href="#"><i class="fas fa-search"></i></a>
       </div>
     </main>
 
@@ -115,26 +86,21 @@
         <i class="fa-solid fa-check"></i> <span class="message-check"> Sport trouvé ! Vous allez être redirigé.</span>
       </div>  
       <div class="contain-error-message hidden">
-        <i class="fa-solid fa-xmark"></i> <span class="message-errorm"> Navré, nous n'avons pas trouvé ce sport.</span>
+        <i class="fa-solid fa-xmark"></i> <span class="message-error"> Navré, nous n'avons pas trouvé ce sport.</span>
       </div>
     </section>
     
     <section class="section loading-section hidden">
-      <div
-        class="loading-section-children section-contain-logo display-transition"
-      >
-        <img
-          class="loading-logo"
-          src="./assets/img/logo.png"
-          alt="Logo de Sport Addict"
-        />
+      <div class="loading-section-children section-contain-logo display-transition">
+        <img class="loading-logo" src="./assets/img/logo.png" alt="Logo de Sport Addict"/>
       </div>
       <div class="loading-section-children section-contain-show-more-btn">
         <button class="show-more-btn btn">Show more !</button>
       </div>
     </section>
 
-    <!-- <script type="module" src="./index.js"></script> -->
-    <!-- <script type="module" src="./main.js"></script> -->
+    <script type="module" src="./src/js/modules/index.js"></script> <!-- Module contenant les fonctions d'index.html -->
+    <script src="./src/js/main.js"></script>  <!-- Fichier contenant les fonctions communes à toutes les pages -->
+
   </body>
 </html>
