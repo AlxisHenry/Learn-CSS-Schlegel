@@ -3,7 +3,7 @@ import { GetSportResearchInUrl } from "../dom/global.js";
 
 export function SetResearchImage() {
 
-    const GetAllAboutSport = IMAGES_DATA.find((x) => x._id === GetSportResearchInUrl);
+    const GetAllAboutSport = IMAGES_DATA.find((x) => x._id === GetSportResearchInUrl.replace('"', '').replace('"',''));
 
     document.querySelector('.show-img-title').innerHTML = GetAllAboutSport.title;
     document.querySelector('.show-img-comment').innerHTML = GetAllAboutSport.comment;

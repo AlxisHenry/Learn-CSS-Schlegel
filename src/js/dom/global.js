@@ -7,3 +7,4 @@ export const SearchThisSport = document.querySelector('.search-this-sport'); // 
 export const ValidationMessage = document.querySelector('.contain-validation-message') //  <div class="contain-validation-message hidden">
 export const ErrorMessage = document.querySelector('.contain-error-message'); //  <div class="contain-error-message hidden">
 export const GetSportResearchInUrl  = new URLSearchParams(window.location.search).get("sport"); // GET sport: All sports for research page
+export const GetUsernameInUrl  = new URLSearchParams(window.location.search).get("user");  // class = events, activities, popular, homepage

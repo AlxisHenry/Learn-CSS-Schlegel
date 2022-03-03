@@ -22,7 +22,6 @@
       </div>
 
       <div class="contain-redirection">
-        <!-- TODO: Enlever le href sur la page actuelle -->
         <span class="menu-redirection menu-get-const">
           <a href="./src/html/sports.html?class=activity" class="activity">Besoin d'idées ?</a>
         </span>
@@ -40,8 +39,7 @@
       <div class="contain-account-informations">
         <span class="user-login">
         </span>
-        <!-- TODO Si connecté, href vers account, sinon # -->
-        <a class="register-button show-account-name" href="./src/html/account.html"><i class="fa-regular fa-user"></i></a>
+        <a class="register-button show-account-name" href="#"><i title="Mon compte" class="fa-regular fa-user"></i></a>
         <a class="register-button show-account-name" href="./src/html/register.html"><span class="user-id">M'inscrire</span></a>
       </div>
     </header>
@@ -71,8 +69,6 @@
         <span class="research-comment">Dites nous ce qui vous inspire.</span>
       </div>
 
-<!-- TODO: Lancement d'une recherche lorsque la touche Enter est appuyée  -->
-
       <div class="search-bar center">
         <input class="input-search" type="search" name="searchbar" id="searchbar" placeholder="Search..."/>
         <a class="search-this-sport" href="#"><i class="fas fa-search"></i></a>
@@ -80,13 +76,15 @@
     </main>
 
     <section class="section research-confirmation-message">
-      <!-- TODO Check value of searchbar -->      
-      <!-- ! JS > Vérifier la width de la searchbar -->
       <div class="contain-validation-message hidden">
+        <!-- TODO: Ajout d'une animation à l'apparition des messages d'informations -->
         <i class="fa-solid fa-check"></i> <span class="message-check"> Sport trouvé ! Vous allez être redirigé.</span>
       </div>  
       <div class="contain-error-message hidden">
         <i class="fa-solid fa-xmark"></i> <span class="message-error"> Navré, nous n'avons pas trouvé ce sport.</span>
+      </div>
+      <div class="contain-welcome-message hidden">
+        <i class="fa-solid fa-hands-clapping"></i> <span class="message-welcome"></span>
       </div>
     </section>
     

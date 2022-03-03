@@ -2,7 +2,8 @@
 
 import { ShowMoreAtLoading, Searchbar } from "../dom/events.js";
 import { InputOfSearchbar, HideLoadingSection } from "../dom/global.js";
-import { NewUser, GetValueOfInput } from "../exports/index.js";
+import { AlreadyVisitedHomepage, GetValueOfInput, WelcomeToUser } from "../exports/index.js";
+import { UserAlreadyRegister } from "../exports/login.js";
 
 ShowMoreAtLoading.addEventListener("click", () => {
   // Fait disparaître la loading section
@@ -17,8 +18,11 @@ Searchbar.addEventListener("click", () => {
 
 window.addEventListener("load", () => {
   // Permet de détecter si l'utilisateur a déjà visité cette page
-  NewUser();
+  AlreadyVisitedHomepage();
   //  Affichage de l'username || Affichage de register
+  UserAlreadyRegister('index');
+  // Affiche un message de bienvenue
+  WelcomeToUser();
 });
 
 InputOfSearchbar.addEventListener("keyup", (e) => {

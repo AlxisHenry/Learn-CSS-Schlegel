@@ -233,6 +233,32 @@ body {
   margin-right: 8px;
 }
 
+.contain-welcome-message {
+  border: none;
+  border-color: none;
+  border-radius: 50px;
+  width: 350px;
+  height: 80%;
+  background-color: none;
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+}
+
+.fa-hands-clapping {
+  font-size: 50px;
+  margin-top: 21px;
+  margin-right: 8px;
+  color: rgb(180, 180, 226);
+}
+
+.message-welcome {
+  color: rgb(180, 180, 226);
+  font-size: 30px;
+  margin-top: 32px;
+  margin-left: 8px;
+}
+
 /*! Confirmation Message  */
 /** Loading */
 
@@ -491,6 +517,7 @@ body {
 .active-on-page {
   opacity: 0.6;
   filter: alpha(opacity = 60); 
+  cursor: pointer;
 } 
 
 /*! Active on page (menus) */
@@ -602,6 +629,10 @@ body {
 
 .absolute {
   position: absolute;
+}
+
+.error-animation-on-form {
+  background-color: rgba(247, 192, 192, 0.63);
 }
 
 /*! Global */
