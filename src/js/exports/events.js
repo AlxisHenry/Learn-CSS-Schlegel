@@ -94,6 +94,10 @@ export function _CreateEvent() {
 
     localStorage.setItem(`event [ ${GetEventInUrl} ]`, JSON.stringify(EventInformations));
 
+    setTimeout(() => {
+      history.back();
+    }, 3000);
+
     return true;
   }
   
