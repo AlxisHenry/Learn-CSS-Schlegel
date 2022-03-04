@@ -116,7 +116,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "natation",
-    "class": "populaire",
+    "class": "populaires",
     "title": "Natation",
     "link": "../../assets/img/popular/natation.jpg",
     "alt": "Natation Image",
@@ -125,7 +125,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "running",
-    "class": "populaire",
+    "class": "populaires",
     "title": "Running",
     "link": "../../assets/img/popular/running.jpg",
     "alt": "Running Image",
@@ -134,7 +134,7 @@ export const IMAGES_DATA = [
   },
   {
     "_id": "yoga",
-    "class": "populaire",
+    "class": "populaires",
     "title": "Yoga",
     "link": "../../assets/img/popular/yoga.jpg",
     "alt": "Yoga Image",

@@ -567,6 +567,10 @@ body {
   overflow: scroll;
 }
 
+.presentation-research-img > img {
+  width: 480px;
+  height: 300px;
+}
 
 .favorites-icons {
   position: absolute;
@@ -585,7 +589,7 @@ body {
   color: white;
 }
 
-.fa-solid { 
+.add-to-fav { 
   color: red;
 }
 
@@ -632,6 +636,49 @@ body {
 }
 
 /*! Account page */
+/** Show sport page */
+
+.contain-categories-images {
+
+  margin-top: 135px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contain-categories-images > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+}
+
+.contain-categories-images > div > a > img {
+  border-radius: 20px;
+  width: 400px;
+  margin-bottom: 12px;
+  height: 150px;
+}
+
+.contain-categories-images > div > h1 {
+  font-size: 22px;
+  color: white;
+  font-style: bold;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contain-categories-images > div > h2 {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/*! Show sport page */
 /** Global */
 
 .hidden {
