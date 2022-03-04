@@ -1,6 +1,7 @@
-import { _InitCreateEventPage, _CreateEvent, AllFormsInputs} from "../exports/events.js";
+import { _InitCreateEventPage, _CreateEvent, AllFormsInputs } from "../exports/events.js";
 import { UserAlreadyRegister } from "../exports/login.js"
 import { SubmitEvent } from "../dom/events.js";
+
 
 window.addEventListener('load', () => {
     UserAlreadyRegister();

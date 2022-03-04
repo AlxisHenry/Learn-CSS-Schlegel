@@ -21,6 +21,7 @@ export function UserAlreadyRegister(on_this_page) {
 
             GoToAccountPage.parentElement.setAttribute('href', on_this_page);
 
+    } else {
+        return false;
     }
-    return false;
 }

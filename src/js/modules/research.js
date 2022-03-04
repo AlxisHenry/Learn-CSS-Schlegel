@@ -3,7 +3,7 @@
 import { SetResearchImage } from "./../exports/research.js";
 import { UserAlreadyRegister } from "./../exports/login.js";
 import { _InitIconsDisplay, _AddFavoritesToLocalstorage, _InitFavorites, _RemoveFavoritesToLocalstorage} from "../exports/favorites.js";
-import { _InitEvent, _CreateEvent, _GoToEvent} from '../exports/events.js';
+import { _InitEvent, _CreateEvent, _GoToEvent } from '../exports/events.js';
 import { EventsIcons, FavoritesIcons } from "./../dom/events.js";
 
 window.addEventListener('load', () => {
@@ -24,7 +24,7 @@ FavoritesIcons[1].addEventListener('click', () => {
 
 
 EventsIcons.forEach(GoToThisEvent => {
-    GoToThisEvent.addEventListener('click', () => {
+    GoToThisEvent.addEventListener('click', (e) => {
         _GoToEvent();
     })
 });

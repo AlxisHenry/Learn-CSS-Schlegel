@@ -25,7 +25,16 @@ export function _GoToEvent() {
   var GetAllAboutSport = IMAGES_DATA.find(
     (x) => x._id === GetSportResearchInUrl.replace('"', "").replace('"', "")
   );
-  EventsIcons[0].parentNode.href = `./event.html?event=${GetAllAboutSport._id}`;
+  
+  if (!localStorage.getItem('account')) {
+    EventsIcons[0].parentNode.href = "#";
+    ErrorMessage.classList.remove('hidden');
+    setTimeout( () => { ErrorMessage.classList.add('hidden') }, 2025 );
+    return false;
+  } else {
+    EventsIcons[0].parentNode.href = `./event.html?event=${GetAllAboutSport._id}`;
+  }
+
   EventsIcons[1].parentNode.href = `./account.html?event=${GetAllAboutSport._id}`;
 }
 
@@ -73,14 +82,18 @@ export function _CreateEvent() {
 
     const EventInformations = {
       sport: GetEventInUrl,
-      name: GetNameOfEvent,
-      duration: GetDurationOfEvent,
-      date: GetDateOfEvent,
+      name: GetNameOfEvent.value,
+      duration: GetDurationOfEvent.value,
+      date: GetDateOfEvent.value,
       owner: JSON.parse(localStorage.getItem("account")).name,
       contact: JSON.parse(localStorage.getItem("account")).email,
     };
 
+    console.log(EventInformations)
     ValidationMessage.style.display = "flex";
+
+    localStorage.setItem(`event [ ${GetEventInUrl} ]`, JSON.stringify(EventInformations));
+
     return true;
   }
   

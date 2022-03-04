@@ -56,8 +56,6 @@
         </span>
       </div>
 
-<!-- TODO : Système de favoris sur cette page, système d'events sur cette page -->
-
     <section class="presentation-research-img">
 
         <h1 class="show-img-title">Basketball</h1>
@@ -66,17 +64,27 @@
 
         <h2 class="show-img-comment">Gérer le ballon</h2>
         <div class="favorites-icons">
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid add-to-fav fa-heart"></i>
+            <i class="fa-regular fa-heart" title="Ajouter à mes favoris"></i>
+            <i class="fa-solid add-to-fav fa-heart" title="Supprimer de mes favoris"></i>
         </div>
         <div class="events-icons">
-            <a class="create-new-event" href="./event.html?event='basketball'"><i class="fa-solid fa-event fa-calendar-day"></i></a>
-            <a class="event-already-created" href="./account.html?=event='basketball'"><i class="fa-solid fa-event fa-calendar-check"></i></a>
+            <a class="create-new-event" href="./event.html?event='basketball'"><i class="fa-solid fa-event fa-calendar-day" title="Créer un évènement"></i></a>
+            <a class="event-already-created" href="./account.html?=event='basketball'"><i class="fa-solid fa-event fa-calendar-check" title="Jeter un coup d'oeil à l'évènement"></i></a>
         </div>
 
     </section>
 
-    <div class="contain-informations-message"></div>
+    <section class="section research-section research-confirmation-message">
+      <div class="contain-validation-message add-message hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check"> Le sport à été ajouté à vos favoris.</span>
+      </div>    
+      <div class="contain-validation-message delete-message hidden">
+        <i class="fa-solid fa-check"></i> <span class="message-check"> Le sport a été supprimé de vos favoris.</span>
+      </div>    
+      <div class="contain-error-message not-register hidden">
+        <i class="fa-solid fa-xmark"></i> <span class="message-error"> Navré, vous n'êtes pas connecté.</span>
+      </div>    
+    </section>
 
     <script type="module" src="./../js/modules/research.js"></script>  <!-- Module contenant les fonctions de research.html -->
     <script src="./../js/main.js"></script>  <!-- Fichier contenant les fonctions communes à toutes les pages -->
