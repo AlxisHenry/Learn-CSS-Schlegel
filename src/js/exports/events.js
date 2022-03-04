@@ -39,6 +39,15 @@ export function _GoToEvent() {
 }
 
 export function _InitCreateEventPage() {
+
+  if (!GetEventInUrl) {
+    history.back();
+  } 
+  
+  if (!(IMAGES_DATA.find((x) => x._id === GetEventInUrl))) {
+    location.replace('./event.html');
+  }
+
   const AddTitle = document.querySelector(".event-form-title");
 
   AddTitle.innerHTML = `Vous souhaitez créer un évènement de <span class="name-of-sport">${GetEventInUrl}</span> ?`;
