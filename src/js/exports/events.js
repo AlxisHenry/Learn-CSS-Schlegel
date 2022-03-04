@@ -84,7 +84,7 @@ export function _CreateEvent() {
       sport: GetEventInUrl,
       name: GetNameOfEvent.value,
       duration: GetDurationOfEvent.value,
-      date: GetDateOfEvent.value,
+      date: new Date(GetDateOfEvent.value).toString().slice(4, 21),
       owner: JSON.parse(localStorage.getItem("account")).name,
       contact: JSON.parse(localStorage.getItem("account")).email,
     };
@@ -123,3 +123,7 @@ function UpdateDate() {
 }
 
 export function _RemoveEvent() {}
+
+export function AutoRemoveOfEvent() {
+  
+}
