@@ -679,6 +679,43 @@ body {
 }
 
 /*! Show sport page */
+/** Event */
+
+.contain-form-event {
+  margin-top: -70px;
+  display: flex;
+  justify-content: center;
+}
+
+.event-form-title {
+  margin-top: 50px;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: white;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.name-of-sport {
+  color: red;
+}
+
+.confirm-creating-event {
+  color: white;
+  text-align: center;
+  
+}
+
+.date {
+  max-width: 94%;
+}
+
+.event-page {
+  margin-top: -50px;
+}
+
+/*! Event */
 /** Global */
 
 .hidden {
