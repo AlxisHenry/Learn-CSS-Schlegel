@@ -5,3 +5,4 @@ export const Searchbar = document.querySelector('.fa-search'); // Searchbar on h
 export const SubmitRegister = document.querySelector('.submit-btn'); // <button id="submit" class="submit-btn">S'inscrire</button>
 export const FavoritesIcons = document.querySelectorAll('.fa-heart'); // <i class="fa-regular fa-heart"></i>
 export const EventsIcons = document.querySelectorAll('.fa-event'); // <i class="fa-solid fa-event fa-calendar-day"></i>
+export const SubmitEvent = document.querySelector('.submit-btn'); // <button id="submit" class="submit-btn">Soumettre cet évènement</button>

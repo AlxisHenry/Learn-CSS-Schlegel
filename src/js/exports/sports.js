@@ -12,6 +12,7 @@ export function URL_CONDITION() {
 }
 
 export function URL_GET_EVENTS() {
+  document.querySelector('title').innerHTML = 'Les Évènements - Sport Addict'
   for (let getImg in IMAGES_DATA) {
     if (IMAGES_DATA.find((x) => x.class === GetUrlClassParam)) {
       if (IMAGES_DATA[getImg].class === "events") {
@@ -27,6 +28,7 @@ export function URL_GET_EVENTS() {
 }
 
 export function URL_GET_ACTIVITY() {
+  document.querySelector('title').innerHTML = "Besoin d'idées ? - Sport Addict"
   for (let getImg in IMAGES_DATA) {
     if (IMAGES_DATA.find((x) => x.class === GetUrlClassParam)) {
       if (IMAGES_DATA[getImg].class === "activity") {
@@ -42,6 +44,7 @@ export function URL_GET_ACTIVITY() {
 }
 
 export function URL_GET_POPULAIRE() {
+  document.querySelector('title').innerHTML = 'Populaires - Sport Addict'
   for (let getImg in IMAGES_DATA) {
     if (IMAGES_DATA.find((x) => x.class === GetUrlClassParam)) {
       if (IMAGES_DATA[getImg].class === "populaires") {

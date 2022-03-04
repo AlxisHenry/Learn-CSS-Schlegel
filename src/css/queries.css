@@ -48,7 +48,12 @@
   .contain-account-informations {
     width: 30%;
   }
-
+  .event-page {
+    margin-top: -20px;
+  }
+  .contain-form-event {
+    margin-top: 0;
+  }
   .contain-redirection {
     width: 20%;
   }
