@@ -36,6 +36,7 @@ body {
 
 .contain-account-informations {
   width: 15%;
+  top: 4px;
   height: 100%;
   position: absolute;
   right: 0;
@@ -93,6 +94,23 @@ body {
   text-decoration: none;
   font-size: 22px;
   color: white;
+  cursor: pointer;
+}
+
+.active-on-page {
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  opacity: 0.6;
+  filter: alpha(opacity = 60); 
+  cursor: pointer;
+  text-decoration: none;
+} 
+
+.menu-redirection > a:hover {
+  color: white;
+  opacity: 1;
 }
 
 /*! Header */
@@ -238,7 +256,7 @@ body {
   border-color: none;
   border-radius: 50px;
   width: 350px;
-  height: 80%;
+  height: 100%;
   background-color: none;
   text-align: center;
   display: flex;
@@ -391,7 +409,7 @@ body {
 }
 
 .menu-burger-redirection > a:hover {
-  color: wheat;
+  color: white;
 }
 
 .menu-burger-redirection:first-child {
@@ -512,15 +530,7 @@ body {
 }
 
 /*! Register Form */
-/** Active on page (menus) */
 
-.active-on-page {
-  opacity: 0.6;
-  filter: alpha(opacity = 60); 
-  cursor: pointer;
-} 
-
-/*! Active on page (menus) */
 /** Research Image */
 
 .research-page {
@@ -573,9 +583,11 @@ body {
   position: relative;
   font-size: 3em;
   color: white;
-
 }
 
+.fa-solid { 
+  color: red;
+}
 
 .fa-calendar-day, .fa-calendar-check {
   position: relative;
@@ -617,7 +629,6 @@ body {
 .contain-features {
   width: 100%;
   height: 100%;
-  /* background-color: blue; */
 }
 
 /*! Account page */
@@ -635,5 +646,8 @@ body {
   background-color: rgba(247, 192, 192, 0.63);
 }
 
-/*! Global */
+.form-structor .signup .form-completed {
+  color: white;
+}
 
+/*! Global */

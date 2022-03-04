@@ -1,7 +1,7 @@
 // Contain Register & Animation Done or Failed
 
 import { SubmitRegister } from "../dom/events.js";
-import { CheckAllUsersValues, RedirectUserOnHomepage, AllFormsInputs, SaveUsersInformations, AlreadyRegister} from "../exports/register.js";
+import { CheckAllUsersValues, RedirectUserOnHomepage, AllFormsInputs, SaveUsersInformations, AlreadyRegister, ChangeColorOfInput} from "../exports/register.js";
 
 window.addEventListener('load', () => {
   AlreadyRegister();
@@ -21,3 +21,11 @@ AllFormsInputs.forEach(keyEnter => {
     }
   })
 })
+
+AllFormsInputs.forEach(InputColor => {
+  InputColor.addEventListener('change', (e) => {
+    ChangeColorOfInput();
+    // console.log(e.target.value);
+  })
+})
+

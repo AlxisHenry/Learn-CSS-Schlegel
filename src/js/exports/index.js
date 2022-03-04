@@ -13,6 +13,8 @@ export function GetValueOfInput() {
         return false;
     }
 
+    document.querySelector('.contain-welcome-message').classList.add('hidden');
+
     if(InputOfSearchbar.value.length < 3) {
         SearchThisSport.href = "#";
         ValidationMessage.classList.add('hidden');
@@ -32,7 +34,7 @@ export function GetValueOfInput() {
     const ResearchInformationsExistByKeyword = IMAGES_DATA.find((x) => x.comment.toLowerCase().includes(ValueOfUserResearch));
 
     var KeywordForUrlParam = InputOfSearchbar.value;
-
+        // todo: Ajout d'un effet de surbrillance sur les caractères qui ont mené à la recherche
     if (ResearchInformationsExistByID) {
         var FormatValueForUrlParam = ResearchInformationsExistByID._id;
         SearchThisSport.href = "#";
@@ -64,21 +66,15 @@ export function GetValueOfInput() {
 }
 
 export function WelcomeToUser() {
-
-    const AccountInformations = JSON.parse(localStorage.getItem('account'));
-
     if(GetUsernameInUrl) {
+        const AccountInformations = JSON.parse(localStorage.getItem('account'));
         // todo: Ajout d'une animation 
-        document.querySelector('.contain-welcome-message').style.display = "flex";
-        document.querySelector('.message-welcome').innerHTML = `Bienvenue ${AccountInformations.name}`;
+        if (GetUsernameInUrl === AccountInformations.name) {
+            document.querySelector('.contain-welcome-message').classList.remove('hidden')
+            document.querySelector('.message-welcome').innerHTML = `Bienvenue ${AccountInformations.name}`;
+        }
+
+    } else {
+        return false;
     }
-
-    // setTimeout(() => { DisplayNoneWelcomeToUser();}, 3000);
-
-}
-
-function DisplayNoneWelcomeToUser() {
-    // todo: Faire disparaître le message de bienvenu avec une animation
-    document.querySelector('.contain-welcome-message').style.display = "none";
-    // location.replace("./index.html");
 }

@@ -24,24 +24,6 @@ export function CheckAllUsersValues() {
         })
         return false;
     } else {
-    //// else if (PasswordOfUser.value.length < 2 || NameOfUser.value.length < 2) {
-    ////     [ NameOfUser, EmailOfUser, PasswordOfUser ].forEach(removeClass => {
-    ////         removeClass.classList.remove('error-animation-on-form');
-    ////     })
-    ////     ValidationMessage.style.display = "none";
-    ////     ErrorMessage.style.display = "flex";
-    ////     if (PasswordOfUser.value.length < 2) {
-    ////         PasswordOfUser.classList.add('error-animation-on-form')
-    ////     } else {
-    ////         PasswordOfUser.classList.remove('error-animation-on-form')
-    ////     }
-    ////     if (NameOfUser.value.length < 2) {
-    ////         NameOfUser.classList.add('error-animation-on-form')
-    ////     } else {
-    ////         NameOfUser.classList.remove('error-animation-on-form')
-    ////     }
-    ////     return false;
-    //// }  
 
     [ NameOfUser, EmailOfUser, PasswordOfUser ].forEach(removeClass => {
         removeClass.classList.remove('error-animation-on-form');
@@ -82,5 +64,13 @@ export function SaveUsersInformations() {
 export function AlreadyRegister() {
     if(localStorage.getItem('account')) {
         window.location.href = `./../../index.html`;
+    }
+}
+
+export function ChangeColorOfInput() {
+    if (NameOfUser.value.length > 0 && EmailOfUser.value.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i) && PasswordOfUser.value.length > 0 ) {
+        SubmitRegister.classList.add('form-completed');
+    } else {
+        SubmitRegister.classList.remove('form-completed');
     }
 }

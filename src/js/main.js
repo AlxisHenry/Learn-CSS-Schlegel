@@ -17,12 +17,12 @@ for (let i = 0; i < GET_CONST.length; i++) {
     }
 
    if ( GET_CONST[i].children[0].classList.contains(GET_URL_CLASS)) {
+    GET_CONST[i].classList.remove('active-on-page');
+    GET_CONST[i].children[0].classList.remove('active-on-page')
+    GET_CONST[i].children[0].removeAttribute('href');
+   } else {
        GET_CONST[i].classList.add('active-on-page');
        GET_CONST[i].children[0].classList.add('active-on-page')
-       GET_CONST[i].children[0].removeAttribute('href');
-   } else {
-       GET_CONST[i].classList.remove('active-on-page');
-       GET_CONST[i].children[0].classList.remove('active-on-page')
    }
 }
 

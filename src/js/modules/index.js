@@ -17,12 +17,12 @@ Searchbar.addEventListener("click", () => {
 });
 
 window.addEventListener("load", () => {
+  // Affiche un message de bienvenue
+  WelcomeToUser();
   // Permet de détecter si l'utilisateur a déjà visité cette page
   AlreadyVisitedHomepage();
   //  Affichage de l'username || Affichage de register
   UserAlreadyRegister('index');
-  // Affiche un message de bienvenue
-  WelcomeToUser();
 });
 
 InputOfSearchbar.addEventListener("keyup", (e) => {
