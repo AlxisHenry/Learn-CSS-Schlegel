@@ -17,6 +17,7 @@ export function _InitEvent() {
     EventsIcons[0].style.display = "none";
     EventsIcons[1].style.display = "block";
   } else {
+    console.log('false');
     return false;
   }
 }
@@ -104,7 +105,7 @@ export function _CreateEvent() {
     localStorage.setItem(`event [ ${GetEventInUrl} ]`, JSON.stringify(EventInformations));
 
     setTimeout(() => {
-      history.back();
+      location.replace(`./research.html?sport=${GetEventInUrl}`)
     }, 3000);
 
     return true;
