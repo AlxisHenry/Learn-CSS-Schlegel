@@ -644,6 +644,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  /* position: absolute; */
 }
 
 .contain-categories-images > div {
@@ -668,6 +669,7 @@ body {
   font-style: bold;
   font-weight: 700;
   text-align: center;
+  margin-top: -40px;
 }
 
 .contain-categories-images > div > h2 {
@@ -677,6 +679,33 @@ body {
   margin-left: 8px;
   margin-right: 8px;
 }
+
+.add-fav, .delete-fav {
+  position: relative;
+  top: -45px;
+  left: 90px;
+  font-size: 20px;
+  background-color: none;
+  height: 20px;
+}
+
+.delete-fav {
+  color: red;
+}
+
+.add-event, .delete-event {
+  position: relative;
+  top: -65px;
+  left: -88px;
+  font-size: 20px;
+  background-color: none;
+  height: 20px;
+}
+
+.delete-event {
+  color: green;
+}
+
 
 /*! Show sport page */
 /** Event */

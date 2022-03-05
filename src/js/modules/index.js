@@ -33,3 +33,15 @@ InputOfSearchbar.addEventListener("keyup", (e) => {
   }
 });
 
+let isCacheSupported = 'caches' in window;
+
+console.log(isCacheSupported)
+
+var url = ['/assets/img/activities/musculation.jpg', '/assets/img/activities/karat%C3%A9.jpg', '/assets/img/activities/fitness.jpg', '/assets/img/activities/basketball.jpg']
+
+caches.open('cacheName').then( cache => {
+  cache.addAll(url).then( () => {
+    console.log("Data cached ")
+    console.log(url)
+ });
+});

@@ -54,7 +54,8 @@ export function SaveUsersInformations() {
         const UsersInformations = {
             name: NameOfUser.value, 
             email: EmailOfUser.value, 
-            password: PasswordOfUser.value
+            password: PasswordOfUser.value,
+            date: new Date(Date.now()),
         }
         
         localStorage.setItem('account', JSON.stringify(UsersInformations));
