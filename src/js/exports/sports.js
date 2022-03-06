@@ -164,5 +164,3 @@ export function _ConfirmUserConnection() {
     return false;
   }
 }
-
-export function _RemoveFavoritesToLocalstorageWithoutAnimation() {}

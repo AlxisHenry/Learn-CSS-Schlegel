@@ -17,7 +17,6 @@ export function _InitEvent() {
     EventsIcons[0].style.display = "none";
     EventsIcons[1].style.display = "block";
   } else {
-    console.log('false');
     return false;
   }
 }
@@ -99,7 +98,6 @@ export function _CreateEvent() {
       contact: JSON.parse(localStorage.getItem("account")).email,
     };
 
-    console.log(EventInformations)
     ValidationMessage.style.display = "flex";
 
     localStorage.setItem(`event [ ${GetEventInUrl} ]`, JSON.stringify(EventInformations));

@@ -687,6 +687,7 @@ body {
   font-size: 20px;
   background-color: none;
   height: 20px;
+  cursor: pointer;
 }
 
 .delete-fav {
@@ -700,6 +701,7 @@ body {
   font-size: 20px;
   background-color: none;
   height: 20px;
+  cursor: pointer;
 }
 
 .delete-event {
