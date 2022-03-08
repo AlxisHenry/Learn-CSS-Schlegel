@@ -9,3 +9,4 @@ export const GetUrlClassParam  = new URLSearchParams(window.location.search).get
 export const GetSportResearchInUrl  = new URLSearchParams(window.location.search).get("sport"); // GET sport: All sports for research page
 export const GetUsernameInUrl  = new URLSearchParams(window.location.search).get("user");  // class = events, activities, popular, homepage
 export const GetEventInUrl = new URLSearchParams(window.location.search).get("event"); // GET sport: All sports for event page
+export const GetKeywordInUrl = new URLSearchParams(window.location.search).get("keyword");

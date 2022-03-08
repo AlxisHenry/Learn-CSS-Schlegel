@@ -34,7 +34,6 @@ export function GetValueOfInput() {
     const ResearchInformationsExistByKeyword = IMAGES_DATA.find((x) => x.comment.toLowerCase().includes(ValueOfUserResearch));
 
     var KeywordForUrlParam = InputOfSearchbar.value;
-        // todo: Ajout d'un effet de surbrillance sur les caractères qui ont mené à la recherche
     if (ResearchInformationsExistByID) {
         var FormatValueForUrlParam = ResearchInformationsExistByID._id;
         SearchThisSport.href = "#";

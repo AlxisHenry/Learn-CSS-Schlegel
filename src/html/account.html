@@ -62,39 +62,93 @@
     <!-- TODO: Show all events, all favorites -->
     <!-- TODO: Show account informations  -->
 
-    <div class="error-alert">
+
+    <div class="container">
+
+      <div class="container-onglets">
+          <div class="onglets active">Mon Compte</div>
+          <div class="onglets">Mes Favoris</div>
+          <div class="onglets">Évenements</div>
+      </div>
+  
+      <div class="contenu active-contenu">
+          <h3>Mes informations personnelles</h3>
+          <hr>
+          <div class="form-account">
+           <label class="label-input first-label" for="">Mon identifiant&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+          <input class="account-input account-userid" type="text" name="" id="" disabled>
+          <i class="fa-regular fa-pen-to-square"></i>
+
+          <label class="label-input nd-label" for="">Mon mot de passe</label>
+          <input class="account-input account-password" type="text" name="" id="" disabled>
+          <i class="fa-solid fa-eye-slash"></i>
+          <i class="fa-solid fa-eye"></i>
+
+          <label class="label-input thrd-label" for="">Mon adresse mail</label>
+          <input class="account-input account-mail" type="text" name="" id="" disabled>
+</div></div>
+  
+      <div class="contenu">
+          <h3>Lorem ipsum dolor sit amet. 2</h3>
+          <hr>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur perspiciatis alias quod, dolores eum illum doloremque assumenda odio architecto, dolorum vitae nobis, quo deleniti ipsum.</p>
+      </div>
+  
+      <div class="contenu">
+          <h3>Lorem ipsum dolor sit amet. 3</h3>
+          <hr>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur perspiciatis alias quod, dolores eum illum doloremque assumenda odio architecto, dolorum vitae nobis, quo deleniti ipsum.</p>
+      </div>
+      </div>
+  
+  
+      <script>const onglets = Array.from(document.querySelectorAll(".onglets"));
+        const contenu = Array.from(document.querySelectorAll(".contenu"));
+        
+        
+        onglets.forEach(onglet => {
+          onglet.addEventListener("click", tabsAnimation)
+        })
+        
+        let index = 0;
+        
+
+        
+        function tabsAnimation(e){
+        
+            const el = e.target;
+            
+            onglets[index].classList.remove("active");
+            contenu[index].classList.remove("active-contenu");
+            
+            index = onglets.indexOf(el);
+            
+            onglets[index].classList.add("active")
+            contenu[index].classList.add("active-contenu");
+            
+        }</script>
+
+       
+
+    <!-- <div class="error-alert">
       <i class="fa-solid fa-xmark"></i> <span class="message-error"> Oupss. Une erreur s'est produite. </span>
+    </div> -->
+    <!-- <div class="change-avatar hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Votre avatar a été changé.</span>
     </div>
-
-
-    <section class="section account-informations">
-      <div class="avatar"></div>
-      <div class="global"></div>
-      <div class="additional">
-        <div class=""></div>
-        <!--! nb favoris, events -->
-      </div>
-      <div class="change-avatar hidden">
-        <i class="fa-solid fa-check"></i> <span class="message-check">Votre avatar a été changé.</span>
-      </div>
-      <div class="change-account-informations hidden">
-        <i class="fa-solid fa-check"></i> <span class="message-check">Changements effectués avec succès.</span>
-      </div>
-    </section>
-
-    <section class="section contain-features">
-      <div class="favorites"></div>
-      <div class="events"></div>
-      <div class="remove-favorites hidden">
-        <i class="fa-solid fa-check"></i> <span class="message-check">Vous avez enlevé ${variable} des favoris</span>
-      </div>
-      <div class="remove-events hidden">
-        <i class="fa-solid fa-check"></i> <span class="message-check">Événement supprimé.</span>
-      </div>
-      <div class="remove-events-at-end hidden">
-        <i class="fa-solid fa-check"></i> <span class="message-check">Événement terminé.</span>
-      </div>
-    </section>
+    <div class="change-account-informations hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Changements effectués avec succès.</span>
+    </div> -->
+    <!-- <div class="remove-favorites hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Vous avez enlevé ${variable} des favoris</span>
+    </div>
+    <div class="remove-events hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Événement supprimé.</span>
+    </div>
+    <div class="remove-events-at-end hidden">
+      <i class="fa-solid fa-check"></i> <span class="message-check">Événement terminé.</span>
+    </div> -->
+    
 
     <script type="module" src="./../js/modules/account.js"></script> <!-- Module contenant les fonctions d'account.html -->
     <script src="./../js/main.js"></script>  <!-- Fichier contenant les fonctions communes à toutes les pages -->

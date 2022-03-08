@@ -607,6 +607,7 @@ body {
   overflow: scroll;
 }
 
+
 .error-alert {
   position: absolute;
   width: 100%;
@@ -617,23 +618,124 @@ body {
   text-align: right;
 }
 
-.account-informations {
-  margin-top: 120px;
-  width: 100%;
-  height: 100%;
+.container {
+  margin-top: 180px;
+  margin-left: 10%;
+  width: 80%;
+  height: 700px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.avatar {
-  margin-top: 30px;
-  margin-left: 120px;
-  background-color: blue;
-  height: 180px;
-  width: 180px;
+.container-onglets{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  border-bottom: 1px solid #333;
+}
+.onglets {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+}
+.onglets {
+  border-right: 1px solid #333;
+  font-size: 20px;
 }
 
-.contain-features {
+.contenu {
+  height: 70%;
   width: 100%;
-  height: 100%;
+  opacity: 0;
+}
+
+.contenu:not(.container:nth-child(0)) {
+  /* position: absolute; */
+}
+
+.contenu h3 {
+  padding: 20px;
+  color: white;
+}
+.contenu hr {
+  width: 250px;
+  height: 2px;
+  margin-left: 20px;
+  background: #000;
+  border: none;
+}
+.contenu p {
+  padding: 20px;
+}
+
+.active {
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.active-contenu {
+  animation: fade 0.5s forwards;
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.container > .active-contenu > .form-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+.container > .active-contenu > .form-account > .fa-pen-to-square {
+  position: relative;
+  top: -30px;
+  left: 80px;
+  font-size: 22px;
+  color: white;
+}
+
+.container > .active-contenu > .form-account > .fa-eye {
+  position: relative;
+  top: -30px;
+  left: 80px;
+  font-size: 22px;
+  color: white;
+}
+
+.container > .active-contenu > .form-account > .fa-eye-slash {
+  position: relative;
+  top: -30px;
+  left: 80px;
+  font-size: 22px;
+  display: none;
+  color: white;
+}
+
+.container > .active-contenu > .form-account > .account-input {
+  width: 200px;
+  height: 35px;
+  margin-top: 10px;  
+  border-radius: 6px;
+}
+
+.container > .active-contenu > .form-account > .label-input {
+  margin-top: 25px;
+  color: white;
+  margin-left: -80px;
 }
 
 /*! Account page */
@@ -644,7 +746,6 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* position: absolute; */
 }
 
 .contain-categories-images > div {
@@ -680,7 +781,8 @@ body {
   margin-right: 8px;
 }
 
-.add-fav, .delete-fav {
+.add-fav,
+.delete-fav {
   position: relative;
   top: -45px;
   left: 90px;
@@ -694,7 +796,8 @@ body {
   color: red;
 }
 
-.add-event, .delete-event {
+.add-event,
+.delete-event {
   position: relative;
   top: -65px;
   left: -88px;
@@ -707,7 +810,6 @@ body {
 .delete-event {
   color: green;
 }
-
 
 /*! Show sport page */
 /** Event */
