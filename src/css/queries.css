@@ -42,7 +42,6 @@
       opacity: 1;
     }
   }
-
 }
 
 @media screen and (max-width: 540px) {
@@ -128,13 +127,13 @@
 
 @media screen and (max-width: 240px) {
   .show-img-title {
-
     position: absolute;
     margin-top: 420px;
   }
 
-  .favorites-icons, .events-icons {
-    margin-top: 15px
+  .favorites-icons,
+  .events-icons {
+    margin-top: 15px;
   }
   .favorites-icons {
     margin-left: 60%;
@@ -150,7 +149,18 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
+  .container {
+    margin-top: 140px;
+  }
 
+  .container-onglets {
+    flex-wrap: wrap;
+  }
 
+  .container > .form-account-container > .form-account > .label-input {
+    margin-top: 25px;
+    color: white;
+    margin-left: -62px;
+  }
 }

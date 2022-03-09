@@ -18,7 +18,7 @@ export function URL_GET_EVENTS() {
     if (IMAGES_DATA.find((x) => x.class === GetUrlClassParam)) {
       if (IMAGES_DATA[getImg].class === "events") {
         const VAR = `<div class="this-items ${addClass()}"> 
-        <a href="./research.html?sport=${IMAGES_DATA[getImg]._id}">
+        <a href="./research.html?sport=${IMAGES_DATA[getImg]._id}&keyword="#"">
         <img src=${
           IMAGES_DATA[getImg].link
         } style="width: 225px" class="show-this-img"></a>
@@ -47,7 +47,7 @@ export function URL_GET_ACTIVITY() {
     if (IMAGES_DATA.find((x) => x.class === GetUrlClassParam)) {
       if (IMAGES_DATA[getImg].class === "activity") {
         const VAR = `<div class="this-items ${IMAGES_DATA[getImg]._id}"> 
-        <a href="./research.html?sport=${IMAGES_DATA[getImg]._id}">
+        <a href="./research.html?sport=${IMAGES_DATA[getImg]._id}&keyword="#"">
         <img src=${IMAGES_DATA[getImg].link} style="width: 225px"></a>
         <i class="fa-solid sports-page add-fav fa-heart" title="Ajouter à mes favoris"></i>
         <i class="fa-solid sports-page delete-fav fa-heart" title="Retirer de mes favoris"></i>
@@ -67,7 +67,7 @@ export function URL_GET_POPULAIRE() {
     if (IMAGES_DATA.find((x) => x.class === GetUrlClassParam)) {
       if (IMAGES_DATA[getImg].class === "populaires") {
         const VAR = `<div class="this-items ${IMAGES_DATA[getImg]._id}"> 
-        <a href="./research.html?sport=${IMAGES_DATA[getImg]._id}">
+        <a href="./research.html?sport=${IMAGES_DATA[getImg]._id}&keyword="#"">
         <img src=${IMAGES_DATA[getImg].link} style="width: 225px"></a>
         <i class="fa-solid sports-page add-fav fa-heart" title="Ajouter à mes favoris"></i>
         <i class="fa-solid sports-page delete-fav fa-heart" title="Retirer de mes favoris"></i>

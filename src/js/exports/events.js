@@ -103,7 +103,7 @@ export function _CreateEvent() {
     localStorage.setItem(`event [ ${GetEventInUrl} ]`, JSON.stringify(EventInformations));
 
     setTimeout(() => {
-      location.replace(`./research.html?sport=${GetEventInUrl}`)
+      location.replace(`./research.html?sport=${GetEventInUrl}&keyword="#"`)
     }, 3000);
 
     return true;

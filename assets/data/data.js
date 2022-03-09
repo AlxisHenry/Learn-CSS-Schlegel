@@ -91,7 +91,7 @@ export const IMAGES_DATA = [
     "title": "Planche à voile",
     "link": "../../assets/img/events/plancheAvoile.jpg",
     "alt": "Planche à voile Image",
-    "comment": "Exhibition intercontinentale des masters Pro",
+    "comment": "Exhibition des masters Pro",
     "h1": "La Planche à Voile"
   },
   {
@@ -101,7 +101,7 @@ export const IMAGES_DATA = [
     "title": "Plongée",
     "link": "../../assets/img/events/plongée.jpg",
     "alt": "Plongée Image",
-    "comment": "Découverte des gorges insondables avec une équipe pro",
+    "comment": "Découverte des gorges insondables",
     "h1": "La Plongée"
   },
   {

@@ -12,6 +12,8 @@ export function SetResearchImage() {
     document.querySelector(".show-img-comment")
   );
 
+  console.log(GetKeywordInUrl)
+
   const FormatKeywordUrl = GetKeywordInUrl.replace('"', "").replace('"', "").toLowerCase();
 
   document.querySelector(".show-img-title").innerHTML = GetAllAboutSport.title;
